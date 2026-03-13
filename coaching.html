@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leading Through Uncertainty — Kamal M. Lutfi</title>
+<meta name="description" content="A coaching and advisory program for founders and executives navigating market volatility, geopolitical disruption, and the pressure to grow anyway. 1:1 sessions and live workshop — April 10, 2026.">
+<meta property="og:title" content="Leading Through Uncertainty — Kamal M. Lutfi">
+<meta property="og:description" content="Coaching for founders and executives navigating market volatility and geopolitical disruption. 1:1 private session ($750) and live group workshop April 10 ($200). Built from 4 failures, 10+ years GCC, 100+ startups coached.">
+<meta property="og:image" content="https://www.kl-advisory.ae/assets/kamal-profile.JPG">
+<meta property="og:url" content="https://www.kl-advisory.ae/workshop.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="KL MedTech Innovation Advisory">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Leading Through Uncertainty — Kamal M. Lutfi">
+<meta name="twitter:description" content="Coaching for founders and executives navigating market volatility. 1:1 session $750 · Workshop April 10 $200.">
+<meta name="twitter:image" content="https://www.kl-advisory.ae/assets/kamal-profile.JPG">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --black:    #0a0a0a;
+    --black-2:  #111111;
+    --black-3:  #1a1a1a;
+    --black-4:  #222222;
+    --red:      #c8102e;
+    --red-dark: #9e0c23;
+    --red-muted:rgba(200,16,46,0.10);
+    --white:    #ffffff;
+    --grey-1:   #e8e8e8;
+    --grey-2:   #a0a0a0;
+    --grey-3:   #4a4a4a;
+    --border:   rgba(255,255,255,0.08);
+    --border-r: rgba(200,16,46,0.3);
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--black);
+    color: var(--white);
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(10,10,10,0.96);
+    backdrop-filter: blur(10px);
+    border-bottom: 0.5px solid var(--border);
+    padding: 0 4rem; height: 64px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo { display: flex; align-items: center; gap: 10px; }
+
+  .nav-cta {
+    display: inline-block; background: var(--red); color: var(--white);
+    font-size: 12px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 9px 18px; text-decoration: none; transition: background 0.15s;
+    border-radius: 6px;
+  }
+  .nav-cta:hover { background: var(--red-dark); }
+
+  /* HERO — optimised for warm DM visitor */
+  .hero {
+    min-height: calc(100vh - 64px);
+    display: grid; grid-template-columns: 1fr 1fr;
+    align-items: center; padding: 5rem 4rem; gap: 5rem;
+    position: relative; overflow: hidden;
+  }
+  .hero::after {
+    content: ''; position: absolute;
+    top: -200px; right: -200px; width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(200,16,46,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--red); margin-bottom: 1.25rem;
+  }
+  .hero-dot {
+    width: 6px; height: 6px; background: var(--red); border-radius: 50%;
+    animation: blink 2s ease-in-out infinite;
+  }
+  @keyframes blink { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(0.7)} }
+
+  .hero-title {
+    font-size: clamp(2.8rem, 5vw, 4.5rem); font-weight: 600;
+    line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 1.25rem;
+  }
+  .hero-title .red { color: var(--red); display: block; }
+
+  .hero-sub {
+    font-size: 1.05rem; font-weight: 300; color: var(--grey-2);
+    line-height: 1.75; margin-bottom: 1.5rem; max-width: 480px;
+  }
+
+  /* Scarcity bar — change 4 */
+  .scarcity-bar {
+    display: flex; gap: 16px; margin-bottom: 2rem; flex-wrap: wrap;
+  }
+  .scarcity-item {
+    display: flex; align-items: center; gap: 8px;
+    background: var(--red-muted); border: 0.5px solid var(--border-r);
+    padding: 8px 14px; font-size: 13px; font-weight: 400; color: var(--grey-1);
+  }
+  .scarcity-item strong { color: var(--white); font-weight: 500; }
+  .scarcity-dot { width: 6px; height: 6px; background: var(--red); border-radius: 50%; flex-shrink: 0; }
+
+  .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 3rem; }
+
+  .btn-red {
+    display: inline-block; background: var(--red); color: var(--white);
+    font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 13px 24px; text-decoration: none; border: none; cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.15s, transform 0.1s;
+  }
+  .btn-red:hover { background: var(--red-dark); transform: translateY(-1px); }
+
+  .btn-outline {
+    display: inline-block; border: 0.5px solid var(--grey-3); color: var(--grey-2);
+    font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 400;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 13px 24px; text-decoration: none; background: none; cursor: pointer;
+    border-radius: 8px;
+    transition: border-color 0.15s, color 0.15s;
+  }
+  .btn-outline:hover { border-color: var(--red); color: var(--red); }
+
+  .hero-stats {
+    display: flex; gap: 2.5rem; flex-wrap: wrap;
+    padding-top: 2rem; border-top: 0.5px solid var(--border);
+  }
+  .stat-num { font-size: 1.8rem; font-weight: 600; line-height: 1; margin-bottom: 4px; }
+  .stat-num .red { color: var(--red); }
+  .stat-label { font-size: 13px; font-weight: 300; color: var(--grey-2); }
+
+  /* Hero right */
+  .quote-block {
+    background: var(--black-3); border: 0.5px solid var(--border);
+    border-left: 2px solid var(--red); padding: 2.5rem;
+  }
+  .quote-text {
+    font-size: 1.05rem; font-weight: 300; line-height: 1.8; color: var(--grey-1);
+    margin-bottom: 1.5rem; font-style: italic;
+  }
+  .quote-attr {
+    font-size: 13px; font-weight: 500; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--grey-2); margin-bottom: 1.5rem;
+  }
+  .quote-attr .red { color: var(--red); }
+  .creds { display: flex; flex-direction: column; }
+  .cred {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 0; border-bottom: 0.5px solid var(--border);
+    font-size: 13px; font-weight: 300; color: var(--grey-2);
+  }
+  .cred:last-child { border-bottom: none; }
+  .cred-dot { width: 4px; height: 4px; background: var(--red); border-radius: 50%; flex-shrink: 0; }
+
+  /* SHARED SECTION */
+  .section-eyebrow {
+    font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--red); margin-bottom: 1rem;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .section-eyebrow::after { content:''; width:36px; height:0.5px; background:var(--red); }
+  .section-title {
+    font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 600;
+    letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 3rem;
+  }
+  .section-title .red { color: var(--red); }
+  .divider { height: 0.5px; background: var(--border); margin: 0 4rem; }
+
+  /* WHO */
+  .who { padding: 6rem 4rem; max-width: 1200px; margin: 0 auto; }
+  .who-grid {
+    display: grid; grid-template-columns: repeat(3,1fr);
+    gap: 1px; background: var(--border); border: 0.5px solid var(--border);
+  }
+  .who-item { background: var(--black); padding: 2rem; transition: background 0.15s; }
+  .who-item:hover { background: var(--black-3); }
+  .who-num { font-size: 12px; font-weight: 500; letter-spacing: 0.1em; color: var(--red); margin-bottom: 1rem; }
+  .who-title { font-size: 1rem; font-weight: 500; margin-bottom: 0.5rem; }
+  .who-desc { font-size: 0.95rem; font-weight: 300; color: var(--grey-2); line-height: 1.7; }
+
+  /* OUTCOMES */
+  .outcomes { background: var(--black-2); padding: 6rem 4rem; border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); }
+  .outcomes-inner { max-width: 1200px; margin: 0 auto; }
+  .outcomes-grid {
+    display: grid; grid-template-columns: repeat(2,1fr);
+    gap: 1px; background: var(--border); border: 0.5px solid var(--border); margin-top: 3rem;
+  }
+  .outcome-item { background: var(--black-2); padding: 2rem; display: flex; gap: 1.25rem; transition: background 0.15s; }
+  .outcome-item:hover { background: var(--black-3); }
+  .outcome-num { font-size: 12px; font-weight: 600; color: var(--red); flex-shrink: 0; padding-top: 2px; }
+  .outcome-title { font-size: 1rem; font-weight: 500; margin-bottom: 6px; }
+  .outcome-desc { font-size: 0.95rem; font-weight: 300; color: var(--grey-2); line-height: 1.65; }
+
+  /* SOCIAL PROOF — change 5 */
+  .social-proof { padding: 6rem 4rem; max-width: 1200px; margin: 0 auto; }
+  .proof-grid {
+    display: grid; grid-template-columns: repeat(3,1fr);
+    gap: 1px; background: var(--border); border: 0.5px solid var(--border); margin-top: 3rem;
+  }
+  .proof-item {
+    background: var(--black); padding: 2rem; position: relative; transition: background 0.15s;
+  }
+  .proof-item:hover { background: var(--black-3); }
+  .proof-item::before {
+    content: '"'; font-size: 3rem; font-weight: 600; color: var(--red);
+    line-height: 1; display: block; margin-bottom: 0.5rem; opacity: 0.6;
+  }
+  .proof-text {
+    font-size: 1rem; font-weight: 300; color: var(--grey-1);
+    line-height: 1.75; margin-bottom: 1.25rem; font-style: italic;
+  }
+  .proof-attr { font-size: 13px; font-weight: 500; color: var(--grey-2); letter-spacing: 0.04em; }
+  .proof-attr span { color: var(--red); display: block; margin-top: 2px; font-weight: 300; font-size: 13px; }
+
+  /* OFFERS — changes 1, 2, 3, 4 */
+  .offers { padding: 6rem 4rem; max-width: 1200px; margin: 0 auto; }
+  .offer-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1px; background: var(--border); border: 0.5px solid var(--border); margin-top: 3rem;
+  }
+  .offer-card { background: var(--black); padding: 2.5rem; position: relative; }
+  .offer-card::before {
+    content:''; position:absolute; top:0; left:0; right:0; height:2px;
+    background: var(--red);
+  }
+  .offer-badge {
+    display: inline-block; font-size: 12px; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--red); border: 0.5px solid var(--border-r);
+    padding: 4px 10px; margin-bottom: 1.25rem;
+  }
+
+  /* Scarcity counter — change 4 */
+  .seats-counter {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 1.25rem;
+  }
+  .seats-badge {
+    background: var(--red-muted); border: 0.5px solid var(--border-r);
+    padding: 5px 12px; font-size: 13px; font-weight: 500; color: var(--white);
+  }
+  .seats-badge .seats-num { color: var(--red); font-size: 15px; font-weight: 600; }
+  .seats-date { font-size: 13px; font-weight: 300; color: var(--grey-2); }
+
+  .offer-title { font-size: 1.3rem; font-weight: 600; letter-spacing: -0.01em; line-height: 1.2; margin-bottom: 0.5rem; }
+  .offer-price { font-size: 2.8rem; font-weight: 600; color: var(--red); letter-spacing: -0.02em; line-height: 1; margin: 1rem 0 0.25rem; }
+  .offer-price-note { font-size: 13px; font-weight: 300; color: var(--grey-2); letter-spacing: 0.02em; margin-bottom: 1.5rem; }
+  .offer-desc { font-size: 0.95rem; font-weight: 300; color: var(--grey-2); line-height: 1.75; margin-bottom: 1.5rem; }
+  .offer-points { list-style: none; margin-bottom: 2rem; display: flex; flex-direction: column; gap: 10px; }
+  .offer-points li { font-size: 0.95rem; font-weight: 300; color: var(--grey-1); display: flex; gap: 10px; line-height: 1.55; }
+  .offer-points li::before { content:'→'; color: var(--red); flex-shrink: 0; font-size: 0.9rem; }
+
+  /* Direct payment CTA — change 1 & 3 */
+  .pay-btn {
+    display: block; width: 100%; background: var(--red); color: var(--white);
+    font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500;
+    letter-spacing: 0.04em; text-align: center; text-decoration: none;
+    padding: 15px 24px; border: none; cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.15s; margin-bottom: 10px;
+  }
+  .pay-btn:hover { background: var(--red-dark); }
+  .pay-note { font-size: 12px; font-weight: 300; color: var(--grey-3); text-align: center; }
+  .pay-note a { color: var(--grey-2); text-decoration: none; }
+  .pay-note a:hover { color: var(--red); }
+
+  /* FAQ — change 7 */
+  .faq { background: var(--black-2); padding: 6rem 4rem; border-top: 0.5px solid var(--border); }
+  .faq-inner { max-width: 780px; margin: 0 auto; }
+  .faq-list { margin-top: 3rem; display: flex; flex-direction: column; gap: 1px; }
+  .faq-item {
+    background: var(--black); border: 0.5px solid var(--border);
+    overflow: hidden;
+  }
+  .faq-q {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.25rem 1.5rem; cursor: pointer;
+    font-size: 1rem; font-weight: 500; color: var(--white);
+    transition: background 0.15s; user-select: none;
+  }
+  .faq-q:hover { background: var(--black-3); }
+  .faq-q .faq-icon {
+    width: 20px; height: 20px; border: 0.5px solid var(--grey-3);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; color: var(--red); flex-shrink: 0;
+    transition: transform 0.2s;
+  }
+  .faq-item.open .faq-icon { transform: rotate(45deg); }
+  .faq-a {
+    display: none; padding: 0 1.5rem 1.25rem;
+    font-size: 0.95rem; font-weight: 300; color: var(--grey-2); line-height: 1.8;
+  }
+  .faq-item.open .faq-a { display: block; }
+
+  /* FOOTER CTA — change 3 */
+  .footer-cta { background: var(--red); padding: 5rem 4rem; text-align: center; }
+  .footer-cta h2 {
+    font-size: clamp(1.8rem, 3vw, 3rem); font-weight: 600;
+    letter-spacing: -0.02em; color: var(--white); margin-bottom: 1rem; line-height: 1.1;
+  }
+  .footer-cta p { font-size: 0.95rem; font-weight: 300; color: rgba(255,255,255,0.75); margin-bottom: 2.5rem; }
+  .footer-cta-btns { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+  .btn-white {
+    display: inline-block; background: var(--white); color: var(--red);
+    font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 13px 24px; text-decoration: none; transition: opacity 0.15s;
+    border-radius: 8px;
+  }
+  .btn-white:hover { opacity: 0.9; }
+  .btn-outline-white {
+    display: inline-block; border: 0.5px solid rgba(255,255,255,0.5); color: var(--white);
+    font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 400;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 13px 24px; text-decoration: none; background: none; transition: border-color 0.15s;
+    border-radius: 8px;
+  }
+  .btn-outline-white:hover { border-color: var(--white); }
+
+  footer {
+    background: var(--black); border-top: 0.5px solid var(--border);
+    padding: 2rem 4rem; display: flex; justify-content: space-between; align-items: center;
+  }
+  footer p { font-size: 12px; font-weight: 300; color: var(--grey-3); }
+  footer a { color: var(--grey-2); text-decoration: none; transition: color 0.15s; }
+  footer a:hover { color: var(--red); }
+
+  @keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+  .hero-tag    { animation: fadeUp 0.55s ease both; }
+  .hero-title  { animation: fadeUp 0.55s ease 0.07s both; }
+  .hero-sub    { animation: fadeUp 0.55s ease 0.12s both; }
+  .scarcity-bar{ animation: fadeUp 0.55s ease 0.17s both; }
+  .hero-ctas   { animation: fadeUp 0.55s ease 0.22s both; }
+  .hero-stats  { animation: fadeUp 0.55s ease 0.28s both; }
+  .hero-right  { animation: fadeUp 0.55s ease 0.15s both; }
+
+  @media (max-width: 900px) {
+    nav { padding: 0 1.5rem; }
+    .hero { grid-template-columns: 1fr; padding: 4rem 1.5rem; gap: 3rem; min-height: auto; }
+    .divider { margin: 0 1.5rem; }
+    .who, .social-proof, .offers { padding: 4rem 1.5rem; }
+    .outcomes, .faq { padding: 4rem 1.5rem; }
+    .outcomes-inner, .faq-inner { padding: 0; }
+    .who-grid, .outcomes-grid, .offer-grid, .proof-grid { grid-template-columns: 1fr; }
+    .footer-cta { padding: 4rem 1.5rem; }
+    footer { padding: 1.5rem; flex-direction: column; gap: 1rem; text-align: center; }
+    .hero-stats { flex-wrap: wrap; gap: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <img src="assets/logo.png" alt="KL MedTech Innovation Advisory" style="height:48px;width:auto;border-radius:8px;">
+  </div>
+  <a href="#offers" class="nav-cta">Book now</a>
+</nav>
+
+<!-- HERO — change 6: sharp, DM-visitor optimised -->
+<section class="hero">
+  <div>
+    <div class="hero-tag"><span class="hero-dot"></span>April 2026 · Limited availability</div>
+    <h1 class="hero-title">
+      Leading<br>Through
+      <span class="red">Uncertainty</span>
+    </h1>
+    <p class="hero-sub">
+      If you reached this page, you already know why you're here.
+      The market is shifting, the pressure is real, and generic advice isn't enough.
+      This is built for that moment.
+    </p>
+
+    <div class="scarcity-bar">
+      <div class="scarcity-item">
+        <span class="scarcity-dot"></span>
+        <span><strong>10 seats</strong> · 1:1 private session</span>
+      </div>
+      <div class="scarcity-item">
+        <span class="scarcity-dot"></span>
+        <span><strong>40 seats</strong> · live workshop · Apr 10</span>
+      </div>
+    </div>
+
+    <div class="hero-ctas">
+      <a href="#offers" class="btn-red">Book your session</a>
+      <a href="#story" class="btn-outline">Who is Kamal?</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="stat-num">100<span class="red">+</span></div><div class="stat-label">Startups coached</div></div>
+      <div><div class="stat-num">4</div><div class="stat-label">Failures rebuilt</div></div>
+      <div><div class="stat-num">10<span class="red">+</span></div><div class="stat-label">Years, GCC & MEA</div></div>
+      <div><div class="stat-num">3</div><div class="stat-label">Foreign markets</div></div>
+    </div>
+  </div>
+
+  <div class="hero-right" id="story">
+    <div class="quote-block">
+      <div style="display:flex;align-items:center;gap:1.25rem;margin-bottom:1.5rem;">
+        <img src="assets/kamal-profile.JPG" alt="Kamal M. Lutfi" style="width:72px;height:72px;border-radius:50%;object-fit:cover;border:2px solid var(--red);flex-shrink:0;">
+        <div>
+          <div class="quote-attr" style="margin-bottom:4px;">Kamal M. Lutfi <span class="red">· MBET, Waterloo</span></div>
+          <div style="font-size:12px;font-weight:300;color:var(--grey-2);">Founder, KL MedTech Innovation Advisory</div>
+        </div>
+      </div>
+      <p class="quote-text">
+        "I grew up in Syria. I have built businesses in Canada, the UAE, and the GCC —
+        and I have failed four times in foreign markets. Not metaphorically. Actually failed.
+        Lost resources, lost time, rebuilt from zero. This program is built from that."
+      </p>
+      <div style="margin-bottom:0.5rem;font-size:12px;font-weight:500;color:var(--white);letter-spacing:0.04em;">Ambition is real. But it means nothing without integrity, clarity, and people who show up when it counts.</div>
+      <div class="creds">
+        <div class="cred"><span class="cred-dot"></span>MBET — University of Waterloo, Canada</div>
+        <div class="cred"><span class="cred-dot"></span>10+ years GCC & MEA commercial strategy</div>
+        <div class="cred"><span class="cred-dot"></span>40+ hospitals · 100+ surgeons · 15+ distributor partnerships</div>
+        <div class="cred"><span class="cred-dot"></span>100+ startups coached across sectors</div>
+        <div class="cred"><span class="cred-dot"></span>4 venture failures · 3 markets rebuilt</div>
+        <div class="cred"><span class="cred-dot"></span>Syrian-Canadian · Based in UAE</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- WHO -->
+<section class="who">
+  <div class="section-eyebrow">Who this is for</div>
+  <h2 class="section-title">You are navigating<br>something <span class="red">real.</span></h2>
+  <div class="who-grid">
+    <div class="who-item">
+      <div class="who-num">01 —</div>
+      <div class="who-title">Founders under pressure</div>
+      <div class="who-desc">You are building in a market that is shifting underneath you. Revenue is uncertain, the team is watching, and you need to think clearly — fast.</div>
+    </div>
+    <div class="who-item">
+      <div class="who-num">02 —</div>
+      <div class="who-title">Executives facing disruption</div>
+      <div class="who-desc">Your industry is being reshaped by geopolitics, AI, or regulatory change. You need a framework for leading your team through the fog without losing ground.</div>
+    </div>
+    <div class="who-item">
+      <div class="who-num">03 —</div>
+      <div class="who-title">Leaders entering new markets</div>
+      <div class="who-desc">Expanding internationally — GCC, MENA, or emerging markets — and the cultural, commercial, and political complexity is real.</div>
+    </div>
+  </div>
+</section>
+
+<!-- OUTCOMES -->
+<section class="outcomes">
+  <div class="outcomes-inner">
+    <div class="section-eyebrow">What you leave with</div>
+    <h2 class="section-title">Not motivation.<br><span class="red">Clarity.</span></h2>
+    <div class="outcomes-grid">
+      <div class="outcome-item">
+        <div class="outcome-num">01</div>
+        <div><div class="outcome-title">A decision framework for volatile markets</div><div class="outcome-desc">How to make sound strategic calls when the ground is moving — not when conditions are ideal.</div></div>
+      </div>
+      <div class="outcome-item">
+        <div class="outcome-num">02</div>
+        <div><div class="outcome-title">Clarity on your next 90 days</div><div class="outcome-desc">A specific, actionable plan built around your actual context — not generic frameworks.</div></div>
+      </div>
+      <div class="outcome-item">
+        <div class="outcome-num">03</div>
+        <div><div class="outcome-title">Resilience architecture</div><div class="outcome-desc">How to design a business or team that absorbs shocks instead of breaking under them.</div></div>
+      </div>
+      <div class="outcome-item">
+        <div class="outcome-num">04</div>
+        <div><div class="outcome-title">The failure advantage</div><div class="outcome-desc">How to extract genuine strategic insight from past failures and convert it into competitive clarity.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRACK RECORD — replaces fabricated testimonials -->
+<section class="social-proof">
+  <div class="section-eyebrow">Track record</div>
+  <h2 class="section-title">Proof in the<br><span class="red">work itself.</span></h2>
+  <div class="proof-grid">
+    <div class="proof-item">
+      <p class="proof-text" style="font-style:normal;font-size:2.2rem;font-weight:600;color:var(--red);margin-bottom:0.5rem;">40+</p>
+      <p class="proof-text" style="font-style:normal;margin-bottom:0.75rem;">Hospitals and clinics engaged across GCC and MEA markets — from primary care to tertiary surgical centres.</p>
+      <div class="proof-attr">Clinical & commercial engagement
+        <span>UAE · Saudi Arabia · Egypt · Turkey</span>
+      </div>
+    </div>
+    <div class="proof-item">
+      <p class="proof-text" style="font-style:normal;font-size:2.2rem;font-weight:600;color:var(--red);margin-bottom:0.5rem;">15+</p>
+      <p class="proof-text" style="font-style:normal;margin-bottom:0.75rem;">Distributor and strategic partnerships designed across MEA — from selection and diligence through to activation and governance.</p>
+      <div class="proof-attr">Distributor strategy
+        <span>Medical devices · Digital health · Diagnostics</span>
+      </div>
+    </div>
+    <div class="proof-item">
+      <p class="proof-text" style="font-style:normal;font-size:2.2rem;font-weight:600;color:var(--red);margin-bottom:0.5rem;">100+</p>
+      <p class="proof-text" style="font-style:normal;margin-bottom:0.75rem;">Startups and founders coached across MedTech, digital health, and adjacent sectors — from early stage through to Series B commercial decisions.</p>
+      <div class="proof-attr">Advisory & coaching
+        <span>Canada · UAE · GCC · International</span>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top:1px;background:var(--black-3);border:0.5px solid var(--border);padding:2rem;display:flex;gap:1.5rem;align-items:flex-start;flex-wrap:wrap;">
+    <div style="flex:1;min-width:220px;">
+      <div style="font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--red);margin-bottom:0.75rem;">Clinical breadth</div>
+      <div style="font-size:0.9rem;font-weight:300;color:var(--grey-2);line-height:1.7;">Dentistry · Dermatology · Ophthalmology · Gastroenterology · Orthopaedics · Urology · Neurology · Spine — from simple mechanical devices to image-guided surgical navigation systems.</div>
+    </div>
+    <div style="flex:1;min-width:220px;">
+      <div style="font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--red);margin-bottom:0.75rem;">Markets lived and worked in</div>
+      <div style="font-size:0.9rem;font-weight:300;color:var(--grey-2);line-height:1.7;">Syria · Saudi Arabia · Egypt · Turkey · Canada · United States · UAE — not market research. Lived experience across cultures, regulatory environments, and economic conditions.</div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFERS — changes 1, 2, 3, 4 -->
+<section class="offers" id="offers">
+  <div class="section-eyebrow">Book your format</div>
+  <h2 class="section-title">Two ways to work<br>with <span class="red">Kamal.</span></h2>
+
+  <div class="offer-grid">
+
+    <!-- 1:1 SESSION -->
+    <div class="offer-card">
+      <div class="offer-badge">1:1 Private Session</div>
+      <div class="seats-counter">
+        <div class="seats-badge"><span class="seats-num">10</span> seats remaining</div>
+        <div class="seats-date">Book before they fill</div>
+      </div>
+      <div class="offer-title">Deep-focus strategic session<br>for founders & executives</div>
+      <div class="offer-price">$750</div>
+      <div class="offer-price-note">90 minutes · private · one-time · written plan included</div>
+      <p class="offer-desc">
+        A single high-intensity working session focused entirely on your situation.
+        Bring your hardest problem — market entry, team crisis, strategic pivot, financial pressure.
+        Leave with a written action plan you can execute on immediately.
+      </p>
+      <ul class="offer-points">
+        <li>90-minute 1:1 video call with Kamal</li>
+        <li>Pre-session intake form to maximise depth and focus</li>
+        <li>Written summary and 90-day action plan delivered within 24 hours</li>
+        <li>One follow-up voice note within 7 days</li>
+      </ul>
+      <a href="https://pay.ziina.com/klmedtech/Qet2O7_mI" class="pay-btn" target="_blank">
+        Book &amp; pay now — $750 →
+      </a>
+      <p class="pay-note">Secure payment via <a href="https://ziina.com" target="_blank">Ziina</a> · Confirmation sent within 2 hours</p>
+    </div>
+
+    <!-- WORKSHOP -->
+    <div class="offer-card">
+      <div class="offer-badge">Live Group Workshop</div>
+      <div class="seats-counter">
+        <div class="seats-badge"><span class="seats-num">40</span> seats · April 10</div>
+        <div class="seats-date">Thu 10 Apr 2026 · 2 hours online</div>
+      </div>
+      <div class="offer-title">Leading through uncertainty —<br>live workshop</div>
+      <div class="offer-price">$200</div>
+      <div class="offer-price-note">per person · April 10, 2026 · 2 hours · recording included</div>
+      <p class="offer-desc">
+        A structured live workshop for executives, commercial leads, and distributor teams
+        navigating geopolitical disruption, market volatility, and growth pressure.
+        Practical frameworks, real case studies, group working sessions.
+      </p>
+      <ul class="offer-points">
+        <li>2-hour live online workshop with Kamal — April 10, 2026</li>
+        <li>The Volatile Market Decision Framework — a 4-step model for making high-stakes calls under uncertainty without waiting for conditions to stabilise</li>
+        <li>GCC & emerging market case studies from real engagements</li>
+        <li>Workshop workbook PDF included</li>
+        <li>Full recording access for 30 days</li>
+      </ul>
+      <a href="https://pay.ziina.com/klmedtech/bCrrGfRJj" class="pay-btn" target="_blank">
+        Reserve your seat — $200 →
+      </a>
+      <p class="pay-note">Secure payment via <a href="https://ziina.com" target="_blank">Ziina</a> · Calendar invite sent within 2 hours · <a href="mailto:k.lutfi@kl-advisory.ae">Team bookings: email Kamal</a></p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ — change 7 -->
+<section class="faq">
+  <div class="faq-inner">
+    <div class="section-eyebrow">Before you book</div>
+    <h2 class="section-title">Common<br><span class="red">questions.</span></h2>
+    <div class="faq-list">
+
+      <div class="faq-item open">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          What exactly happens in the 1:1 session?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          Before the session you complete a short intake form — your current situation, the decision or challenge you're facing, and what a successful outcome looks like. We use the 90 minutes to work through that specifically: no generic frameworks, no scripted coaching. After the call you receive a written summary and a 90-day action plan within 24 hours. One follow-up voice note within 7 days if you have questions on implementation.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Is the workshop relevant if I'm not in MedTech or GCC markets?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          Yes. The frameworks are built around leading and making decisions under uncertainty — geopolitical volatility, market disruption, team pressure, strategic pivots. The GCC and MedTech cases are illustrations, not prerequisites. The core content applies to any founder or executive navigating a volatile environment in 2026.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Can my company book multiple seats or the full workshop?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          Yes. If you want to bring a team of 5 or more, email <a href="/cdn-cgi/l/email-protection#7a1154160f0e1c133a1116571b1e0c1309150803541b1f" style="color:var(--red);"><span class="__cf_email__" data-cfemail="89e2a7e5fcfdefe0c9e2e5a4e8edffe0fae6fbf0a7e8ec">[email&#160;protected]</span></a> directly. Group rates and private corporate workshop arrangements are available. Several distributor and MedTech commercial teams have already inquired about booking the full session for their regional leadership.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          What if the session isn't what I expected?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          If within the first 30 minutes you feel the session isn't delivering value, say so and we stop. You receive a full refund. This has never happened — but the offer stands because confidence in the work matters more than protecting the revenue.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          What timezone is the April 10 workshop?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          The exact session time will be confirmed to all registered participants by April 3, 2026 — 7 days before the workshop. You will receive a calendar invite and joining link by email once your seat is reserved. A full recording is available for 30 days for anyone who can't attend the live session.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER CTA — change 3 -->
+<section class="footer-cta">
+  <h2>Uncertainty is not<br>going away.</h2>
+  <p>The question is whether your leadership is built for it.</p>
+  <div class="footer-cta-btns">
+    <a href="#offers" class="btn-white">Book your session now</a>
+    <a href="https://wa.me/971562239603" target="_blank" class="btn-outline-white">WhatsApp Kamal ↗</a>
+    <a href="https://www.linkedin.com/in/kamal-lutfi/" target="_blank" class="btn-outline-white">LinkedIn ↗</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Kamal M. Lutfi · <a href="https://www.kl-advisory.ae" target="_blank">KL MedTech Innovation Advisory</a></p>
+  <p>UAE · Canada · GCC Markets · <a href="mailto:k.lutfi@kl-advisory.ae">k.lutfi@kl-advisory.ae</a> · <a href="https://wa.me/971562239603" target="_blank">WhatsApp ↗</a></p>
+</footer>
+
+<script>
+  function toggleFaq(el) {
+    const item = el.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const t = document.querySelector(a.getAttribute('href'));
+      if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+</script>
+</body>
+</html>
