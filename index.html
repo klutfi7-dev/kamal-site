@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KL MedTech — GCC Commercial Architecture</title>
+  <meta name="description" content="Your product is cleared. Its commercial system is not. GCC Commercial Architecture for international MedTech companies." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Karla:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy:#0A1628; --navy2:#0f2040; --copper:#B87333; --copper2:#d4924a;
+      --stone:#F5F2ED; --stone2:#E8E4DC; --white:#FFFFFF;
+      --dark:#1C1C1C; --mid:#6B7280; --body:#374151;
+      --ff-display:'Cormorant Garamond',Georgia,serif;
+      --ff-body:'Karla',system-ui,sans-serif;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:var(--ff-body);font-size:22px;line-height:1.65;color:var(--dark);background:var(--white);-webkit-font-smoothing:antialiased;}
+    a{color:inherit;text-decoration:none;}
+    .container{max-width:1080px;margin:0 auto;padding:0 2rem;}
+
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(245,242,237,0.98);backdrop-filter:blur(10px);border-bottom:1px solid rgba(184,115,51,0.2);padding:0 2rem;height:70px;display:flex;align-items:center;}
+    .nav-inner{max-width:1080px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;}
+    .nav-brand{display:flex;align-items:center;gap:0.65rem;}
+    .nav-logo{height:58px;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
+    .nav-logo img{height:58px;width:auto;object-fit:contain;display:block;}
+    .nav-name{font-size:0.95rem;font-weight:600;color:var(--navy);letter-spacing:0.01em;}
+    .nav-links{display:flex;align-items:center;gap:2rem;}
+    .nav-links a{font-size:0.95rem;font-weight:400;color:rgba(10,22,40,0.6);letter-spacing:0.03em;transition:color 0.2s;}
+    .nav-links a:hover{color:var(--copper);}
+    .nav-cta{background:transparent;border:1px solid var(--copper);color:var(--copper);font-family:var(--ff-body);font-size:0.78rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;padding:0.45rem 1.1rem;cursor:pointer;transition:all 0.2s;display:inline-block;}
+    .nav-cta:hover{background:var(--copper);color:var(--white);}
+
+    /* HERO */
+    #hero{min-height:100vh;background:var(--navy);display:flex;align-items:center;padding:8rem 2rem 6rem;position:relative;overflow:hidden;}
+    #hero::before{content:'';position:absolute;inset:0;background:url('assets/hero.png') center 15%/65% no-repeat;opacity:0.3;-webkit-mask-image:radial-gradient(ellipse 70% 90% at 50% 30%, black 40%, transparent 75%);mask-image:radial-gradient(ellipse 70% 90% at 50% 30%, black 40%, transparent 75%);pointer-events:none;z-index:0;}
+    #hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,22,40,0.35) 0%,rgba(10,22,40,0.72) 55%,rgba(10,22,40,0.97) 100%);pointer-events:none;z-index:1;}
+    
+    .hero-inner{max-width:1080px;margin:0 auto;width:100%;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;z-index:2;}
+    .hero-kicker{font-size:0.92rem;font-weight:500;letter-spacing:0.16em;color:var(--copper);margin-bottom:2rem;display:block;}
+    .hero-headline{font-family:var(--ff-display);font-size:clamp(3rem,5.5vw,5rem);line-height:1.08;margin-bottom:2rem;max-width:800px;}
+    .hero-headline .s1{display:block;font-weight:600;color:var(--white);}
+    .hero-rule{display:block;width:44px;height:2px;background:var(--copper);margin:1rem auto;}
+    .hero-headline .s2{display:block;font-weight:300;color:rgba(245,242,237,0.78);font-size:clamp(2.4rem,4.5vw,4rem);}
+    .hero-headline em{font-style:italic;color:var(--copper);font-weight:400;}
+    .hero-sub{font-size:1.35rem;font-weight:300;color:rgba(245,242,237,0.72);line-height:1.8;max-width:600px;margin-bottom:2.5rem;text-align:center;}
+    .hero-actions{display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap;}
+    .btn-primary{background:var(--copper);color:var(--white);border:none;font-family:var(--ff-body);font-size:0.85rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;padding:0.95rem 2.2rem;cursor:pointer;transition:background 0.2s;display:inline-block;}
+    .btn-primary:hover{background:var(--copper2);}
+    .hero-note{font-size:1rem;color:rgba(245,242,237,0.38);}
+
+    /* STATS STRIP */
+    #stats{background:var(--stone);border-bottom:1px solid var(--stone2);}
+    .stats-inner{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);padding:0 2rem;}
+    .stat-item{padding:2rem 1.5rem;border-right:1px solid var(--stone2);transition:background 0.2s;}
+    .stat-item:last-child{border-right:none;}
+    .stat-item:hover{background:rgba(184,115,51,0.04);}
+    .stat-num{font-family:var(--ff-display);font-size:2.4rem;font-weight:600;color:var(--navy);line-height:1;margin-bottom:0.3rem;}
+    .stat-num span{color:var(--copper);}
+    .stat-label{font-size:1.1rem;font-weight:300;color:var(--mid);line-height:1.4;}
+
+    /* SHARED */
+    .section-kicker{font-size:0.92rem;font-weight:500;letter-spacing:0.14em;color:var(--copper);margin-bottom:0.75rem;display:block;}
+    .copper-rule{display:block;width:40px;height:2px;background:var(--copper);margin-bottom:1.5rem;}
+    .section-heading{font-family:var(--ff-display);font-size:clamp(2.1rem,3.5vw,3.2rem);font-weight:500;line-height:1.2;color:var(--navy);margin-bottom:1.5rem;}
+    .section-heading-light{font-family:var(--ff-display);font-size:clamp(2.1rem,3.5vw,3.2rem);font-weight:500;line-height:1.2;color:var(--white);margin-bottom:1rem;}
+
+    /* PROBLEM */
+    #problem{background:var(--white);padding:6rem 2rem;}
+    .problem-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:5rem;align-items:start;}
+    .problem-left{position:sticky;top:80px;}
+    .problem-body{font-size:1.35rem;font-weight:300;line-height:1.9;color:var(--body);}
+    .problem-body p+p{margin-top:1.25rem;}
+    .problem-body strong{font-weight:600;color:var(--dark);}
+    .problem-pull{margin-top:2rem;padding:1.5rem 1.75rem;border-left:3px solid var(--copper);background:rgba(184,115,51,0.05);}
+    .problem-pull p{font-family:var(--ff-display);font-size:1.5rem;font-style:italic;font-weight:500;color:var(--navy);line-height:1.5;}
+
+    /* CONTRAST TABLE */
+    #contrast{background:var(--stone);padding:6rem 2rem;}
+    .contrast-header{text-align:center;margin-bottom:3rem;}
+    .contrast-header p{font-size:1.2rem;font-weight:300;color:var(--body);max-width:52ch;margin:0 auto;}
+    .contrast-wrap{border:1px solid var(--stone2);overflow:hidden;}
+    .contrast-head-row{display:grid;grid-template-columns:1fr 1fr;}
+    .contrast-col-head{padding:1.1rem 1.75rem;display:flex;align-items:center;gap:0.65rem;}
+    .contrast-col-head.without{background:rgba(10,22,40,0.05);}
+    .contrast-col-head.with{background:var(--navy);}
+    .contrast-col-title{font-size:0.92rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;}
+    .contrast-col-title.without{color:var(--mid);}
+    .contrast-col-title.with{color:var(--copper);}
+    .c-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+    .c-dot.without{background:var(--mid);}
+    .c-dot.with{background:var(--copper);}
+    .contrast-row{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--stone2);}
+    .c-cell{padding:1.25rem 1.75rem;font-size:1.22rem;font-weight:300;line-height:1.55;display:flex;align-items:flex-start;gap:0.65rem;}
+    .c-cell+.c-cell{border-left:1px solid var(--stone2);}
+    .c-cell.without{color:var(--mid);}
+    .c-cell.with{color:var(--dark);font-weight:400;}
+    .c-mark{flex-shrink:0;font-size:0.85rem;margin-top:0.05rem;}
+    .c-mark.x{color:#C0392B;}
+    .c-mark.ok{color:var(--copper);}
+
+    /* ARCHITECTURE */
+    #architecture{background:var(--navy);padding:6rem 2rem;}
+    .arch-header{text-align:center;margin-bottom:1rem;}
+    .arch-sub{text-align:center;font-size:1.15rem;font-weight:300;color:rgba(245,242,237,0.55);margin-bottom:3rem;letter-spacing:0.04em;}
+    .arch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(184,115,51,0.1);border:1px solid rgba(184,115,51,0.1);}
+    .arch-item{background:rgba(10,22,40,0.97);padding:2rem 1.75rem;transition:background 0.2s;}
+    .arch-item:hover{background:rgba(15,32,64,1);}
+    .arch-num{font-family:var(--ff-display);font-size:2rem;font-weight:400;color:rgba(184,115,51,0.65);line-height:1;margin-bottom:0.75rem;}
+    .arch-title{font-family:var(--ff-display);font-size:1.4rem;font-weight:500;color:var(--white);margin-bottom:0.6rem;line-height:1.3;}
+    .arch-body{font-size:1.2rem;font-weight:300;color:rgba(245,242,237,0.65);line-height:1.75;}
+
+    /* MID CTA */
+    #mid-cta{background:var(--copper);padding:3rem 2rem;text-align:center;}
+    .mid-cta-inner{max-width:600px;margin:0 auto;}
+    .mid-cta-text{font-family:var(--ff-display);font-size:1.9rem;font-style:italic;font-weight:500;color:var(--white);margin-bottom:1.25rem;line-height:1.4;}
+    .btn-white{background:var(--white);color:var(--copper);border:none;font-family:var(--ff-body);font-size:0.85rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:0.9rem 2rem;cursor:pointer;transition:all 0.2s;display:inline-block;}
+    .btn-white:hover{background:var(--navy);color:var(--white);}
+
+    /* WHO */
+    #who{background:var(--white);padding:6rem 2rem;}
+    .who-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
+    .who-intro{font-size:1.35rem;font-weight:300;line-height:1.8;color:var(--body);margin-bottom:2rem;}
+    .fit-table{display:flex;flex-direction:column;}
+    .fit-col-head{padding:0.9rem 1.25rem;font-size:0.88rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;display:flex;align-items:center;gap:0.6rem;}
+    .fit-col-head.not{background:rgba(10,22,40,0.04);color:var(--mid);border:1px solid var(--stone2);}
+    .fit-col-head.is{background:var(--navy);color:var(--copper);border:1px solid var(--navy);margin-top:1.5rem;}
+    .fit-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+    .fit-dot.not{background:var(--mid);}
+    .fit-dot.is{background:var(--copper);}
+    .fit-item{padding:1.1rem 1.25rem;font-size:1.2rem;font-weight:300;line-height:1.55;border:1px solid var(--stone2);border-top:none;display:flex;align-items:flex-start;gap:0.75rem;}
+    .fit-item.is-item{border-color:rgba(10,22,40,0.1);}
+    .fit-mark{flex-shrink:0;margin-top:0.1rem;font-size:0.85rem;}
+    .fit-mark.not{color:#C0392B;}
+    .fit-mark.is{color:var(--copper);}
+    .fit-text{color:var(--body);}
+
+    /* ABOUT */
+    #about{background:var(--stone);padding:6rem 2rem;}
+    .about-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:4rem;align-items:start;}
+    .about-card{background:var(--navy);}
+    .about-photo-wrap{overflow:hidden;height:420px;}
+    .about-photo{width:100%;height:100%;object-fit:cover;object-position:center 12%;display:block;filter:grayscale(10%);}
+    .about-card-body{padding:2rem 2rem 2.5rem;}
+    .about-name{font-family:var(--ff-display);font-size:1.9rem;font-weight:500;color:var(--white);margin-bottom:0.2rem;}
+    .about-title{font-size:0.82rem;font-weight:400;letter-spacing:0.06em;color:var(--copper);text-transform:uppercase;margin-bottom:1.5rem;}
+    .about-divider{height:1px;background:rgba(184,115,51,0.2);margin-bottom:1.5rem;}
+    .about-meta{display:flex;flex-direction:column;gap:0.7rem;}
+    .about-meta-row{display:flex;align-items:flex-start;gap:1rem;}
+    .about-meta-key{font-weight:500;color:rgba(245,242,237,0.5);letter-spacing:0.04em;min-width:100px;flex-shrink:0;font-size:0.8rem;text-transform:uppercase;padding-top:0.1rem;}
+    .about-meta-val{color:rgba(245,242,237,0.9);font-weight:300;font-size:1.1rem;line-height:1.4;}
+    .about-body-text{font-size:1.35rem;font-weight:300;line-height:1.9;color:var(--body);}
+    .about-body-text p+p{margin-top:1rem;}
+    .about-numbers{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:2rem;border-top:1px solid var(--stone2);padding-top:1.5rem;}
+    .about-num-item{padding-right:1.5rem;}
+    .about-num-item+.about-num-item{padding-left:1.5rem;border-left:1px solid var(--stone2);}
+    .about-num-val{font-family:var(--ff-display);font-size:2rem;font-weight:600;color:var(--navy);line-height:1;margin-bottom:0.2rem;}
+    .about-num-val span{color:var(--copper);}
+    .about-num-label{font-size:1rem;font-weight:300;color:var(--mid);}
+
+    /* CONTACT */
+    #contact{background:var(--navy);padding:6rem 2rem;}
+    .contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:5rem;align-items:start;}
+    .contact-heading{font-family:var(--ff-display);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:500;color:var(--white);line-height:1.2;margin-bottom:1rem;}
+    .contact-body{font-size:1.3rem;font-weight:300;color:rgba(245,242,237,0.72);line-height:1.7;margin-bottom:1.5rem;}
+    .contact-note{font-size:1.2rem;font-weight:300;color:rgba(245,242,237,0.55);line-height:1.6;border-left:2px solid rgba(184,115,51,0.35);padding-left:1rem;}
+    .contact-form{display:flex;flex-direction:column;gap:1rem;}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+    .form-group{display:flex;flex-direction:column;gap:0.35rem;}
+    .form-group label{font-size:0.75rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:rgba(245,242,237,0.55);}
+    .form-group input,.form-group select,.form-group textarea{background:rgba(255,255,255,0.04);border:1px solid rgba(184,115,51,0.2);color:var(--white);font-family:var(--ff-body);font-size:1.1rem;font-weight:300;padding:0.9rem 1rem;outline:none;transition:border-color 0.2s;width:100%;-webkit-appearance:none;appearance:none;}
+    .form-group select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23B87333' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem;cursor:pointer;background-color:rgba(255,255,255,0.04);}
+    .form-group select option{background:var(--navy2);color:var(--white);}
+    .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--copper);}
+    .form-group input::placeholder,.form-group textarea::placeholder{color:rgba(245,242,237,0.2);}
+    .form-group textarea{resize:vertical;min-height:95px;}
+    .form-submit{background:var(--copper);color:var(--white);border:none;font-family:var(--ff-body);font-size:0.88rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:1rem 2rem;cursor:pointer;transition:background 0.2s;margin-top:0.5rem;}
+    .form-submit:hover{background:var(--copper2);}
+    .form-disclaimer{font-size:1rem;color:rgba(245,242,237,0.4);line-height:1.6;}
+    .form-success{display:none;padding:2rem;background:rgba(184,115,51,0.1);border:1px solid rgba(184,115,51,0.3);text-align:center;}
+    .form-success p{font-family:var(--ff-display);font-size:1.2rem;font-style:italic;color:var(--white);}
+    .form-success small{display:block;margin-top:0.5rem;font-size:0.85rem;font-weight:300;color:rgba(245,242,237,0.5);}
+
+    /* FOOTER */
+    footer{background:#060e1a;padding:1.75rem 2rem;border-top:1px solid rgba(184,115,51,0.1);}
+    .footer-inner{max-width:1080px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.75rem;}
+    .footer-brand{font-size:1rem;font-weight:400;color:rgba(245,242,237,0.45);}
+    .footer-brand strong{color:rgba(245,242,237,0.75);font-weight:600;}
+    .footer-links{display:flex;gap:1.5rem;}
+    .footer-links a{font-size:1rem;color:rgba(245,242,237,0.4);transition:color 0.2s;}
+    .footer-links a:hover{color:var(--copper);}
+    .footer-copy{font-size:0.82rem;color:rgba(245,242,237,0.25);width:100%;text-align:center;padding-top:0.75rem;border-top:1px solid rgba(255,255,255,0.05);margin-top:0.5rem;}
+
+    /* ANIMATIONS */
+    .fade-up{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease;}
+    .fade-up.visible{opacity:1;transform:translateY(0);}
+    .fade-up:nth-child(2){transition-delay:0.08s;}
+    .fade-up:nth-child(3){transition-delay:0.16s;}
+    .fade-up:nth-child(4){transition-delay:0.24s;}
+
+    /* RESPONSIVE */
+    @media(max-width:900px){
+      .nav-links{display:none;}
+      .problem-grid,.who-grid,.about-grid,.contact-grid{grid-template-columns:1fr;gap:2.5rem;}
+      .problem-left{position:static;}
+      .arch-grid{grid-template-columns:1fr;}
+      .stats-inner{grid-template-columns:repeat(2,1fr);}
+      .stat-item:nth-child(2){border-right:none;}
+      .form-row{grid-template-columns:1fr;}
+      .about-numbers{grid-template-columns:1fr 1fr;}
+      .contrast-head-row,.contrast-row{grid-template-columns:1fr;}
+      .c-cell+.c-cell{border-left:none;border-top:1px solid var(--stone2);}
+      .contrast-col-head.without{display:none;}
+    }
+    @media(max-width:600px){
+      nav{padding:0 1.25rem;}
+      #hero{padding:7rem 1.25rem 4rem;}
+      .stats-inner{padding:0 1.25rem;}
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <div class="nav-logo"><img src="assets/logo.png" alt="KL MedTech" /></div>
+    </div>
+    <div class="nav-links">
+      <a href="#problem">Problem</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#who">Who</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="#contact" class="nav-cta">Assess Fit</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    <span class="hero-kicker">GCC Commercial Architecture</span>
+    <h1 class="hero-headline">
+      <span class="s1">Your product is cleared.</span>
+      <span class="hero-rule"></span>
+      <span class="s2">Its commercial system <em>is not.</em></span>
+    </h1>
+    <p class="hero-sub">Most international MedTech companies treat GCC entry as a distributor search problem. It is a commercial architecture problem. The distinction determines whether you own your market assets — or your channel partner does.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Assess Fit</a>
+      <span class="hero-note">CE/FDA-cleared devices only. Small number of engagements.</span>
+    </div>
+  </div>
+</section>
+
+<!-- STATS STRIP -->
+<div id="stats">
+  <div class="stats-inner">
+    <div class="stat-item fade-up">
+      <div class="stat-num"><span>+</span>15</div>
+      <div class="stat-label">Years across GCC, MENA and international markets</div>
+    </div>
+    <div class="stat-item fade-up">
+      <div class="stat-num"><span>+</span>70</div>
+      <div class="stat-label">Distributor relationships across 10+ countries</div>
+    </div>
+    <div class="stat-item fade-up">
+      <div class="stat-num"><span>+</span>100</div>
+      <div class="stat-label">Surgeons and clinical stakeholders engaged</div>
+    </div>
+    <div class="stat-item fade-up">
+      <div class="stat-num"><span>+</span>40</div>
+      <div class="stat-label">Hospitals and clinics across the region</div>
+    </div>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<section id="problem">
+  <div class="container">
+    <div class="problem-grid">
+      <div class="problem-left fade-up">
+        <span class="copper-rule"></span>
+        <span class="section-kicker">The Problem</span>
+        <h2 class="section-heading">How structure fails before the first conversation</h2>
+      </div>
+      <div class="problem-body fade-up">
+        <p>Walk into any MedTech conference in Europe and ask a commercial director how they plan to enter the GCC. The answer follows a predictable sequence: attend Arab Health, collect contacts, identify a distributor, get the registration, launch.</p>
+        <p>This is not a market entry strategy. It is a sequence of activities that feels like progress while the structural problems compound underneath. A distributor is selected based on enthusiasm — not capability. Exclusivity is granted. The registration goes in the distributor's name. Eighteen months later nothing has been placed. The manufacturer wants to switch. They cannot — the registration is held by the distributor, and walking away means starting the regulatory clock from zero.</p>
+        <div class="problem-pull">
+          <p>"This is not an execution failure. It is an architecture failure — determined in the first ninety days."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTRAST TABLE -->
+<section id="contrast">
+  <div class="container">
+    <div class="contrast-header fade-up">
+      <span class="section-kicker">The Difference</span>
+      <h2 class="section-heading">With architecture vs without it</h2>
+      <p>The gap between these two outcomes is not product quality, market timing, or budget. It is whether the commercial system was built before the wrong decisions were locked in.</p>
+    </div>
+    <div class="contrast-wrap fade-up">
+      <div class="contrast-head-row">
+        <div class="contrast-col-head without">
+          <span class="c-dot without"></span>
+          <span class="contrast-col-title without">Without Architecture</span>
+        </div>
+        <div class="contrast-col-head with">
+          <span class="c-dot with"></span>
+          <span class="contrast-col-title with">With Architecture</span>
+        </div>
+      </div>
+      <div class="contrast-row">
+        <div class="c-cell without"><span class="c-mark x">✗</span><span>Distributor selected on enthusiasm and portfolio size</span></div>
+        <div class="c-cell with"><span class="c-mark ok">✓</span><span>Distributor selected against a weighted capability scorecard</span></div>
+      </div>
+      <div class="contrast-row">
+        <div class="c-cell without"><span class="c-mark x">✗</span><span>Registration held by distributor — manufacturer cannot switch without losing market position</span></div>
+        <div class="c-cell with"><span class="c-mark ok">✓</span><span>Registration owned by manufacturer or independent AR — switchability protected from day one</span></div>
+      </div>
+      <div class="contrast-row">
+        <div class="c-cell without"><span class="c-mark x">✗</span><span>GCC-wide exclusivity granted upfront — commercial leverage lost before revenue starts</span></div>
+        <div class="c-cell with"><span class="c-mark ok">✓</span><span>Country-level agreements with performance gates — leverage maintained throughout</span></div>
+      </div>
+      <div class="contrast-row">
+        <div class="c-cell without"><span class="c-mark x">✗</span><span>Distributor has no KOL relationships in the relevant specialty</span></div>
+        <div class="c-cell with"><span class="c-mark ok">✓</span><span>KOL engagement sequenced before distributor activation — clinical pull precedes sales push</span></div>
+      </div>
+      <div class="contrast-row">
+        <div class="c-cell without"><span class="c-mark x">✗</span><span>Three years at Arab Health. Board asking why spend has not produced revenue.</span></div>
+        <div class="c-cell with"><span class="c-mark ok">✓</span><span>Commercial system operational. Market assets owned. Revenue architecture in place.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ARCHITECTURE -->
+<section id="architecture">
+  <div class="container">
+    <div class="arch-header fade-up">
+      <span class="section-kicker" style="color:var(--copper);">The Discipline</span>
+      <h2 class="section-heading-light">GCC Commercial Architecture</h2>
+      <p style="color:rgba(245,242,237,0.65);font-size:1rem;font-weight:300;max-width:50ch;margin:0 auto;">The structural discipline that converts a CE/FDA-cleared device into repeatable GCC revenue — before the wrong decisions are locked in. Not a strategy document. A system that operates.</p>
+    </div>
+    <p class="arch-sub">Six components. One architecture. Each designed to protect the decisions that follow it.</p>
+    <div class="arch-grid">
+      <div class="arch-item fade-up">
+        <div class="arch-num">01</div>
+        <h3 class="arch-title">Registration Ownership</h3>
+        <p class="arch-body">Market-by-market structure ensuring the manufacturer — not the distributor — controls their market assets. SFDA, MOHAP, NHRA sequenced for switchability.</p>
+      </div>
+      <div class="arch-item fade-up">
+        <div class="arch-num">02</div>
+        <h3 class="arch-title">Distributor Selection & Activation</h3>
+        <p class="arch-body">IPP-based partner identification and capability assessment. Agreements with governance clauses and performance gates that protect your position.</p>
+      </div>
+      <div class="arch-item fade-up">
+        <div class="arch-num">03</div>
+        <h3 class="arch-title">KOL & Clinical Pull</h3>
+        <p class="arch-body">KOL identification, relationship sequencing, and pilot design. Building the clinical case before the sales conversation — market pull before the tender is written.</p>
+      </div>
+      <div class="arch-item fade-up">
+        <div class="arch-num">04</div>
+        <h3 class="arch-title">Commercial Narrative & Pricing</h3>
+        <p class="arch-body">Distributor-facing business case and pricing calibrated to GCC procurement realities — not assumptions carried from the home market.</p>
+      </div>
+      <div class="arch-item fade-up">
+        <div class="arch-num">05</div>
+        <h3 class="arch-title">Regulatory Sequencing</h3>
+        <p class="arch-body">Entry market prioritisation, AR/LAR appointment, SFDA and MOHAP pathway management. Entering the right market first — not the easiest one.</p>
+      </div>
+      <div class="arch-item fade-up">
+        <div class="arch-num">06</div>
+        <h3 class="arch-title">Embedded Execution</h3>
+        <p class="arch-body">Kamal operates as your on-the-ground GCC commercial arm — attending the meetings, managing the distributors, advancing the registrations, week to week.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MID CTA -->
+<section id="mid-cta">
+  <div class="mid-cta-inner">
+    <p class="mid-cta-text">"The window for category ownership in GCC is open. Speed of architecture determines who holds it."</p>
+    <a href="#contact" class="btn-white">Assess Fit</a>
+  </div>
+</section>
+
+<!-- WHO -->
+<section id="who">
+  <div class="container">
+    <div class="who-grid">
+      <div class="fade-up">
+        <span class="copper-rule"></span>
+        <span class="section-kicker">Who This Is For</span>
+        <h2 class="section-heading">Built for a specific kind of company</h2>
+        <p class="who-intro">KL MedTech works with a small number of companies at a time. This is who the engagement is built for.</p>
+      </div>
+      <div class="fade-up">
+        <div class="fit-table">
+          <div class="fit-col-head not">
+            <span class="fit-dot not"></span>
+            <span>Not the right fit</span>
+          </div>
+          <div class="fit-item">
+            <span class="fit-mark not">✗</span>
+            <span class="fit-text">Companies that need a market research report, not embedded execution</span>
+          </div>
+          <div class="fit-item">
+            <span class="fit-mark not">✗</span>
+            <span class="fit-text">Teams expecting distributor introductions as the primary deliverable</span>
+          </div>
+          <div class="fit-item">
+            <span class="fit-mark not">✗</span>
+            <span class="fit-text">Companies not yet ready to make decisions on registration, channel, and market sequence</span>
+          </div>
+          <div class="fit-col-head is">
+            <span class="fit-dot is"></span>
+            <span>The right fit</span>
+          </div>
+          <div class="fit-item is-item">
+            <span class="fit-mark is">✓</span>
+            <span class="fit-text">CE/FDA-cleared device with no structured GCC revenue</span>
+          </div>
+          <div class="fit-item is-item">
+            <span class="fit-mark is">✓</span>
+            <span class="fit-text">The commercialisation decision has a named owner with authority to act</span>
+          </div>
+          <div class="fit-item is-item">
+            <span class="fit-mark is">✓</span>
+            <span class="fit-text">Companies that want a commercial system built, not advice delivered</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="fade-up">
+        <div class="about-card">
+          <div class="about-photo-wrap">
+            <img src="assets/kamal.jpg" alt="Kamal M. Lutfi" class="about-photo" onerror="this.parentElement.style.display='none'" />
+          </div>
+          <div class="about-card-body">
+            <h3 class="about-name">Kamal M. Lutfi</h3>
+            <p class="about-title">MBET — Founder & Principal</p>
+            <div class="about-divider"></div>
+            <div class="about-meta">
+              <div class="about-meta-row"><span class="about-meta-key">Based</span><span class="about-meta-val">Dubai, UAE</span></div>
+              <div class="about-meta-row"><span class="about-meta-key">Education</span><span class="about-meta-val">MBET, University of Waterloo</span></div>
+              <div class="about-meta-row"><span class="about-meta-key">Background</span><span class="about-meta-val">Biomedical Engineering</span></div>
+              <div class="about-meta-row"><span class="about-meta-key">Origin</span><span class="about-meta-val">Syrian-Canadian</span></div>
+              <div class="about-meta-row"><span class="about-meta-key">Languages</span><span class="about-meta-val">Arabic &amp; English</span></div>
+              <div class="about-meta-row"><span class="about-meta-key">Specialties</span><span class="about-meta-val">Ortho, Neuro, Spine, GI, Derm, Ophtha</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fade-up">
+        <span class="copper-rule"></span>
+        <span class="section-kicker">About</span>
+        <h2 class="section-heading">Not a broker. An architect.</h2>
+        <div class="about-body-text">
+          <p>I grew up in a Syrian family where integrity and discipline were not values — they were standards. That shapes every engagement.</p>
+          <p>Over 15 years I have worked across Syria, Saudi Arabia, Egypt, Turkey, Canada, the United States, and the UAE — inside hospitals and operating rooms, across distributor negotiations, regulatory submissions, and commercial strategy for founders, executives, and boards.</p>
+          <p>I have built significant GCC pipelines for international MedTech companies, navigated multi-stakeholder hospital sales cycles, and structured distributor relationships across ten countries. I know what the architecture failure looks like before it becomes expensive — because I have seen it from both sides.</p>
+          <p>I am not a consultant who delivers a report and moves on. I am embedded in the work, week to week, until the commercial system is operational.</p>
+        </div>
+        <div class="about-numbers">
+          <div class="about-num-item"><div class="about-num-val"><span>+</span>40</div><div class="about-num-label">Hospitals &amp; clinics</div></div>
+          <div class="about-num-item"><div class="about-num-val"><span>+</span>70</div><div class="about-num-label">Distributors across 10+ countries</div></div>
+          <div class="about-num-item"><div class="about-num-val"><span>+</span>100</div><div class="about-num-label">Clinical stakeholders</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="fade-up">
+        <span class="copper-rule" style="background:rgba(184,115,51,0.4);"></span>
+        <span class="section-kicker">Assess Fit</span>
+        <h2 class="contact-heading">Start with a conversation</h2>
+        <p class="contact-body">This is not a sales call. It is a short assessment to determine whether your situation and the GCC Commercial Architecture engagement are a genuine match.</p>
+        <p class="contact-note">KL MedTech works with a small number of companies at a time. If the fit is not right, you will hear that directly — and why.</p>
+      </div>
+      <div class="fade-up">
+        <form class="contact-form" action="https://formspree.io/f/xdayjjwp" method="POST" id="fitForm">
+          <div class="form-row">
+            <div class="form-group"><label for="name">Full Name</label><input type="text" id="name" name="name" placeholder="Firstname Lastname" required /></div>
+            <div class="form-group"><label for="company">Company</label><input type="text" id="company" name="company" placeholder="Company name" required /></div>
+          </div>
+          <div class="form-group"><label for="email">Work Email</label><input type="email" id="email" name="email" placeholder="you@company.com" required /></div>
+          <div class="form-group"><label for="product">Product &amp; Regulatory Clearance</label><input type="text" id="product" name="product" placeholder="e.g. CE-IVD molecular diagnostic device" required /></div>
+          <div class="form-group">
+            <label for="stage">GCC Stage</label>
+            <select id="stage" name="stage" required>
+              <option value="" disabled selected>Select your current stage</option>
+              <option value="no-presence">No GCC presence — evaluating entry</option>
+              <option value="failed-attempt">Previous attempt — need to restrategise</option>
+              <option value="distributor-issue">Have a distributor — relationship not working</option>
+              <option value="early-traction">Early traction — need to accelerate</option>
+            </select>
+          </div>
+          <div class="form-group"><label for="situation">Your Situation (2–3 sentences)</label><textarea id="situation" name="situation" placeholder="What is driving the GCC conversation internally right now?" required></textarea></div>
+          <button type="submit" class="form-submit">Submit for Fit Assessment</button>
+          <p class="form-disclaimer">Responses reviewed personally by Kamal. You will hear back within 2 business days.</p>
+        </form>
+        <div class="form-success" id="formSuccess">
+          <p>Received. Kamal will review and respond within 2 business days.</p>
+          <small>If the fit is right, the next step is a 30-minute call.</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <strong>KL MedTech</strong> &nbsp;·&nbsp; Dubai, UAE &nbsp;·&nbsp; GCC Commercial Architecture &nbsp;·&nbsp; &copy; 2026
+    </div>
+    <div class="footer-links">
+      <a href="https://linkedin.com/in/kamal-lutfi" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:k.lutfi@kl-advisory.ae">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  const form = document.getElementById('fitForm');
+  const success = document.getElementById('formSuccess');
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('.form-submit');
+      btn.textContent = 'Submitting...'; btn.disabled = true;
+      try {
+        const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
+        if (res.ok) { form.style.display = 'none'; success.style.display = 'block'; }
+        else { btn.textContent = 'Something went wrong — try again'; btn.disabled = false; }
+      } catch { btn.textContent = 'Something went wrong — try again'; btn.disabled = false; }
+    });
+  }
+</script>
+</body>
+</html>
