@@ -238,7 +238,7 @@
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </div>
-    <a href="#contact" class="nav-cta">Assess Fit</a>
+    <a href="/scorecard/" class="nav-cta">Assess Fit</a>
   </div>
 </nav>
 
@@ -253,7 +253,7 @@
     </h1>
     <p class="hero-sub">Most international MedTech companies treat GCC entry as a distributor search problem. It is a commercial architecture problem. The distinction determines whether you own your market assets — or your channel partner does.</p>
     <div class="hero-actions">
-      <a href="#contact" class="btn-primary">Assess Fit</a>
+      <a href="/scorecard/" class="btn-primary">Assess Fit</a>
       <span class="hero-note">CE/FDA-cleared devices only. Small number of engagements.</span>
     </div>
   </div>
@@ -392,7 +392,7 @@
 <section id="mid-cta">
   <div class="mid-cta-inner">
     <p class="mid-cta-text">"The window for category ownership in GCC is open. Speed of architecture determines who holds it."</p>
-    <a href="#contact" class="btn-white">Assess Fit</a>
+    <a href="/scorecard/" class="btn-white">Assess Fit</a>
   </div>
 </section>
 
@@ -496,36 +496,24 @@
     <div class="contact-grid">
       <div class="fade-up">
         <span class="copper-rule" style="background:rgba(184,115,51,0.4);"></span>
-        <span class="section-kicker">Assess Fit</span>
-        <h2 class="contact-heading">Start with a conversation</h2>
-        <p class="contact-body">This is not a sales call. It is a short assessment to determine whether your situation and the GCC Commercial Architecture engagement are a genuine match.</p>
-        <p class="contact-note">KL MedTech works with a small number of companies at a time. If the fit is not right, you will hear that directly — and why.</p>
+        <span class="section-kicker">Direct Line</span>
+        <h2 class="contact-heading">Send a note.</h2>
+        <p class="contact-body">The <a href="/scorecard/" style="color:var(--copper);text-decoration:underline;text-underline-offset:3px;">GCC Market Readiness Scorecard</a> gives a structured 4-minute read on your commercial position — that is the starting point for most engagements. This form is for everything else: a partnership question, a specific situation, an introduction.</p>
+        <p class="contact-note">Reviewed personally. Response within two business days. KL MedTech works with a small number of companies at a time.</p>
       </div>
       <div class="fade-up">
         <form class="contact-form" action="https://formspree.io/f/xdayjjwp" method="POST" id="fitForm">
           <div class="form-row">
             <div class="form-group"><label for="name">Full Name</label><input type="text" id="name" name="name" placeholder="Firstname Lastname" required /></div>
-            <div class="form-group"><label for="company">Company</label><input type="text" id="company" name="company" placeholder="Company name" required /></div>
+            <div class="form-group"><label for="email">Work Email</label><input type="email" id="email" name="email" placeholder="you@company.com" required /></div>
           </div>
-          <div class="form-group"><label for="email">Work Email</label><input type="email" id="email" name="email" placeholder="you@company.com" required /></div>
-          <div class="form-group"><label for="product">Product &amp; Regulatory Clearance</label><input type="text" id="product" name="product" placeholder="e.g. CE-IVD molecular diagnostic device" required /></div>
-          <div class="form-group">
-            <label for="stage">GCC Stage</label>
-            <select id="stage" name="stage" required>
-              <option value="" disabled selected>Select your current stage</option>
-              <option value="no-presence">No GCC presence — evaluating entry</option>
-              <option value="failed-attempt">Previous attempt — need to restrategise</option>
-              <option value="distributor-issue">Have a distributor — relationship not working</option>
-              <option value="early-traction">Early traction — need to accelerate</option>
-            </select>
-          </div>
-          <div class="form-group"><label for="situation">Your Situation (2–3 sentences)</label><textarea id="situation" name="situation" placeholder="What is driving the GCC conversation internally right now?" required></textarea></div>
-          <button type="submit" class="form-submit">Submit for Fit Assessment</button>
-          <p class="form-disclaimer">Responses reviewed personally by Kamal. You will hear back within 2 business days.</p>
+          <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" placeholder="A few sentences on what brought you here." required></textarea></div>
+          <input type="hidden" name="_subject" value="Direct message from kl-advisory.ae" />
+          <button type="submit" class="form-submit">Send Message</button>
+          <p class="form-disclaimer">Reviewed personally by Kamal. Response within two business days.</p>
         </form>
         <div class="form-success" id="formSuccess">
-          <p>Received. Kamal will review and respond within 2 business days.</p>
-          <small>If the fit is right, the next step is a 30-minute call.</small>
+          <p>Received. Kamal will respond within two business days.</p>
         </div>
       </div>
     </div>
