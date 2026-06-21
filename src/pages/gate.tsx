@@ -65,7 +65,7 @@ export default function Gate() {
           </h1>
 
           <p className="text-base text-muted-foreground leading-relaxed mb-8">
-            Enter your details below to unlock the report.
+            For CE/FDA-cleared MedTech companies considering GCC expansion. 4 minutes to understand your commercial position.
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-4">
