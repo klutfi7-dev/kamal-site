@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KL MedTech — GCC Commercial Architecture</title>
-  <meta name="description" content="Your product is cleared. Its commercial system is not. GCC Commercial Architecture for international MedTech companies." />
+  <title>KL MedTech — GCC Commercial Architecture for MedTech</title>
+  <meta name="description" content="GCC Commercial Architecture for international MedTech companies. From regulatory clearance to first purchase order in 6 months. Based in Dubai." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Karla:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -47,7 +47,7 @@
     .hero-rule{display:block;width:44px;height:2px;background:var(--copper);margin:1rem auto;}
     .hero-headline .s2{display:block;font-weight:300;color:rgba(245,242,237,0.78);font-size:clamp(2.4rem,4.5vw,4rem);}
     .hero-headline em{font-style:italic;color:var(--copper);font-weight:400;}
-    .hero-sub{font-size:1.35rem;font-weight:300;color:rgba(245,242,237,0.72);line-height:1.8;max-width:600px;margin-bottom:2.5rem;text-align:center;}
+    .hero-sub{font-size:1.35rem;font-weight:300;color:rgba(245,242,237,0.72);line-height:1.8;max-width:680px;margin-bottom:2.5rem;text-align:center;}
     .hero-actions{display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap;}
     .btn-primary{background:var(--copper);color:var(--white);border:none;font-family:var(--ff-body);font-size:0.85rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;padding:0.95rem 2.2rem;cursor:pointer;transition:background 0.2s;display:inline-block;}
     .btn-primary:hover{background:var(--copper2);}
@@ -113,6 +113,33 @@
     .arch-num{font-family:var(--ff-display);font-size:2rem;font-weight:400;color:rgba(184,115,51,0.65);line-height:1;margin-bottom:0.75rem;}
     .arch-title{font-family:var(--ff-display);font-size:1.4rem;font-weight:500;color:var(--white);margin-bottom:0.6rem;line-height:1.3;}
     .arch-body{font-size:1.2rem;font-weight:300;color:rgba(245,242,237,0.65);line-height:1.75;}
+
+    /* OFFERS */
+    #offers{background:var(--white);padding:6rem 2rem;}
+    .offers-header{text-align:center;margin-bottom:3rem;}
+    .offers-intro{font-size:1.25rem;font-weight:300;color:var(--body);max-width:52ch;margin:0 auto;line-height:1.7;}
+    .offers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:1080px;margin:0 auto;}
+    .offer-card{background:var(--stone);border:1px solid var(--stone2);padding:2.25rem 1.75rem;display:flex;flex-direction:column;transition:transform 0.2s,box-shadow 0.2s;}
+    .offer-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(10,22,40,0.08);}
+    .offer-card.featured{background:var(--navy);border-color:var(--navy);}
+    .offer-badge{display:inline-block;align-self:flex-start;font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:0.35rem 0.75rem;background:var(--stone2);color:var(--mid);margin-bottom:1.25rem;}
+    .offer-card.featured .offer-badge{background:var(--copper);color:var(--white);}
+    .offer-title{font-family:var(--ff-display);font-size:1.55rem;font-weight:500;color:var(--navy);margin-bottom:0.5rem;line-height:1.3;}
+    .offer-card.featured .offer-title{color:var(--white);}
+    .offer-price{font-family:var(--ff-display);font-size:2.2rem;font-weight:600;color:var(--navy);margin-bottom:1.25rem;line-height:1;}
+    .offer-price span{font-size:1rem;font-weight:300;color:var(--mid);font-family:var(--ff-body);}
+    .offer-card.featured .offer-price{color:var(--white);}
+    .offer-card.featured .offer-price span{color:rgba(245,242,237,0.6);}
+    .offer-list{list-style:none;padding:0;margin:0 0 1.5rem 0;flex:1;}
+    .offer-list li{font-size:1.05rem;font-weight:300;color:var(--body);line-height:1.6;padding:0.4rem 0;padding-left:1.5rem;position:relative;}
+    .offer-list li::before{content:'—';position:absolute;left:0;color:var(--copper);font-weight:400;}
+    .offer-card.featured .offer-list li{color:rgba(245,242,237,0.8);}
+    .offer-note{font-size:1rem;font-weight:300;color:var(--mid);line-height:1.5;margin-bottom:1.5rem;font-style:italic;}
+    .offer-card.featured .offer-note{color:rgba(245,242,237,0.55);}
+    .offer-cta{display:inline-block;text-align:center;width:100%;background:transparent;border:1px solid var(--copper);color:var(--copper);font-family:var(--ff-body);font-size:0.82rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;padding:0.85rem 1.5rem;cursor:pointer;transition:all 0.2s;}
+    .offer-cta:hover{background:var(--copper);color:var(--white);}
+    .offer-card.featured .offer-cta{background:var(--copper);color:var(--white);border-color:var(--copper);}
+    .offer-card.featured .offer-cta:hover{background:var(--copper2);}
 
     /* MID CTA */
     #mid-cta{background:var(--copper);padding:3rem 2rem;text-align:center;}
@@ -215,6 +242,7 @@
       .contrast-head-row,.contrast-row{grid-template-columns:1fr;}
       .c-cell+.c-cell{border-left:none;border-top:1px solid var(--stone2);}
       .contrast-col-head.without{display:none;}
+      .offers-grid{grid-template-columns:1fr;}
     }
     @media(max-width:600px){
       nav{padding:0 1.25rem;}
@@ -234,6 +262,7 @@
     <div class="nav-links">
       <a href="#problem">Problem</a>
       <a href="#architecture">Architecture</a>
+      <a href="#offers">Engagement</a>
       <a href="#who">Who</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
@@ -251,10 +280,10 @@
       <span class="hero-rule"></span>
       <span class="s2">Its commercial system <em>is not.</em></span>
     </h1>
-    <p class="hero-sub">Most international MedTech companies treat GCC entry as a distributor search problem. It is a commercial architecture problem. The distinction determines whether you own your market assets — or your channel partner does.</p>
+    <p class="hero-sub">The average international MedTech company spends $200,000 and 18–24 months on their first GCC market entry. Most of that is lost to the wrong distributor, a registration held hostage, and years of conference booths that produce lanyards, not revenue. The distinction is not product quality. It is whether the commercial system was built before the wrong decisions were locked in.</p>
     <div class="hero-actions">
       <a href="/scorecard/" class="btn-primary">Assess Fit</a>
-      <span class="hero-note">CE/FDA-cleared devices only. Small number of engagements.</span>
+      <span class="hero-note">CE/FDA-cleared devices only. Limited engagements at a time.</span>
     </div>
   </div>
 </section>
@@ -291,7 +320,7 @@
         <h2 class="section-heading">How structure fails before the first conversation</h2>
       </div>
       <div class="problem-body fade-up">
-        <p>Walk into any MedTech conference in Europe and ask a commercial director how they plan to enter the GCC. The answer follows a predictable sequence: attend Arab Health, collect contacts, identify a distributor, get the registration, launch.</p>
+        <p>Walk into any MedTech conference and ask a commercial director how they plan to enter the GCC. The answer follows a predictable sequence: attend Arab Health, collect contacts, identify a distributor, get the registration, launch.</p>
         <p>This is not a market entry strategy. It is a sequence of activities that feels like progress while the structural problems compound underneath. A distributor is selected based on enthusiasm — not capability. Exclusivity is granted. The registration goes in the distributor's name. Eighteen months later nothing has been placed. The manufacturer wants to switch. They cannot — the registration is held by the distributor, and walking away means starting the regulatory clock from zero.</p>
         <div class="problem-pull">
           <p>"This is not an execution failure. It is an architecture failure — determined in the first ninety days."</p>
@@ -388,6 +417,60 @@
   </div>
 </section>
 
+<!-- OFFERS -->
+<section id="offers">
+  <div class="container">
+    <div class="offers-header fade-up">
+      <span class="section-kicker">Engagement Models</span>
+      <h2 class="section-heading">Three ways to enter GCC</h2>
+      <p class="offers-intro">Each model matches a different stage of commitment. All of them protect your market assets and accelerate your timeline.</p>
+    </div>
+    <div class="offers-grid">
+      <div class="offer-card fade-up">
+        <div class="offer-badge">Entry Point</div>
+        <h3 class="offer-title">GCC Validation Sprint</h3>
+        <div class="offer-price">$5,000 <span>flat fee</span></div>
+        <ul class="offer-list">
+          <li>4 weeks</li>
+          <li>3 KOL conversations arranged and facilitated</li>
+          <li>3 vetted distributor conversations</li>
+          <li>1 regulatory pathway brief</li>
+          <li>3-page written brief for your board</li>
+        </ul>
+        <p class="offer-note">For leadership teams who want proof before committing to a $200K expansion.</p>
+        <a href="/scorecard/" class="offer-cta">Assess Fit</a>
+      </div>
+      <div class="offer-card featured fade-up">
+        <div class="offer-badge">Most Common</div>
+        <h3 class="offer-title">6-Month Commercialization Sprint</h3>
+        <div class="offer-price">$3,500–$4,500 <span>/ month</span></div>
+        <ul class="offer-list">
+          <li>KOL anchoring and clinical evidence development</li>
+          <li>Distributor appointment and governance</li>
+          <li>Regulatory navigation (SFDA, MOHAP, EDE)</li>
+          <li>Milestone bonuses for first contract and first PO</li>
+          <li>Embedded execution, week to week</li>
+        </ul>
+        <p class="offer-note">For companies with a board mandate to enter GCC in 2026.</p>
+        <a href="#contact" class="offer-cta">Start a Conversation</a>
+      </div>
+      <div class="offer-card fade-up">
+        <div class="offer-badge">Strategic</div>
+        <h3 class="offer-title">Fractional GCC Partner</h3>
+        <div class="offer-price">Custom <span>retainer + equity</span></div>
+        <ul class="offer-list">
+          <li>12-month embedded engagement</li>
+          <li>Full commercial architecture + execution</li>
+          <li>Revenue-share or equity component for high-conviction products</li>
+          <li>We become your GCC commercial arm</li>
+        </ul>
+        <p class="offer-note">For companies ready to treat GCC as a core market, not a side project.</p>
+        <a href="#contact" class="offer-cta">Start a Conversation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- MID CTA -->
 <section id="mid-cta">
   <div class="mid-cta-inner">
@@ -414,7 +497,11 @@
           </div>
           <div class="fit-item">
             <span class="fit-mark not">✗</span>
-            <span class="fit-text">Companies that need a market research report, not embedded execution</span>
+            <span class="fit-text">Companies still deciding whether GCC is "interesting"</span>
+          </div>
+          <div class="fit-item">
+            <span class="fit-mark not">✗</span>
+            <span class="fit-text">Pre-revenue startups seeking market validation before regulatory clearance</span>
           </div>
           <div class="fit-item">
             <span class="fit-mark not">✗</span>
@@ -434,7 +521,11 @@
           </div>
           <div class="fit-item is-item">
             <span class="fit-mark is">✓</span>
-            <span class="fit-text">The commercialisation decision has a named owner with authority to act</span>
+            <span class="fit-text">Board-approved budget for international expansion</span>
+          </div>
+          <div class="fit-item is-item">
+            <span class="fit-mark is">✓</span>
+            <span class="fit-text">Leadership team that wants to own market assets, not rent them</span>
           </div>
           <div class="fit-item is-item">
             <span class="fit-mark is">✓</span>
@@ -473,8 +564,10 @@
       <div class="fade-up">
         <span class="copper-rule"></span>
         <span class="section-kicker">About</span>
-        <h2 class="section-heading">Not a broker. An architect.</h2>
+        <h2 class="section-heading">Not a broker. Your GCC commercial arm.</h2>
         <div class="about-body-text">
+          <p>I am a biomedical engineer with an MBET from the University of Waterloo. I spent 10 years inside international MedTech commercial roles across North America and MENA before moving to Dubai to build KL MedTech.</p>
+          <p>I know how international companies think about expansion: fast, outcome-driven, and reluctant to hand market control to a distributor they have never met. That is why I built a model where the manufacturer owns the registration, the KOL relationships, and the commercial narrative — while I execute the architecture on the ground.</p>
           <p>I grew up in a Syrian family where integrity and discipline were not values — they were standards. That shapes every engagement.</p>
           <p>Over 15 years I have worked across Syria, Saudi Arabia, Egypt, Turkey, Canada, the United States, and the UAE — inside hospitals and operating rooms, across distributor negotiations, regulatory submissions, and commercial strategy for founders, executives, and boards.</p>
           <p>I have built significant GCC pipelines for international MedTech companies, navigated multi-stakeholder hospital sales cycles, and structured distributor relationships across ten countries. I know what the architecture failure looks like before it becomes expensive — because I have seen it from both sides.</p>
