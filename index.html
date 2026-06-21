@@ -29,8 +29,8 @@
     .nav-logo{height:58px;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
     .nav-logo img{height:58px;width:auto;object-fit:contain;display:block;}
     .nav-name{font-size:0.95rem;font-weight:600;color:var(--navy);letter-spacing:0.01em;}
-    .nav-links{display:flex;align-items:center;gap:2rem;}
-    .nav-links a{font-size:0.95rem;font-weight:400;color:rgba(10,22,40,0.6);letter-spacing:0.03em;transition:color 0.2s;}
+    .nav-links{display:flex;align-items:center;gap:1.5rem;}
+    .nav-links a{font-size:0.9rem;font-weight:400;color:rgba(10,22,40,0.6);letter-spacing:0.03em;transition:color 0.2s;}
     .nav-links a:hover{color:var(--copper);}
     .nav-cta{background:transparent;border:1px solid var(--copper);color:var(--copper);font-family:var(--ff-body);font-size:0.78rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;padding:0.45rem 1.1rem;cursor:pointer;transition:all 0.2s;display:inline-block;}
     .nav-cta:hover{background:var(--copper);color:var(--white);}
@@ -55,7 +55,7 @@
 
     /* STATS STRIP */
     #stats{background:var(--stone);border-bottom:1px solid var(--stone2);}
-    .stats-inner{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);padding:0 2rem;}
+    .stats-inner{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);padding:0 2rem;}
     .stat-item{padding:2rem 1.5rem;border-right:1px solid var(--stone2);transition:background 0.2s;}
     .stat-item:last-child{border-right:none;}
     .stat-item:hover{background:rgba(184,115,51,0.04);}
@@ -114,6 +114,17 @@
     .arch-title{font-family:var(--ff-display);font-size:1.4rem;font-weight:500;color:var(--white);margin-bottom:0.6rem;line-height:1.3;}
     .arch-body{font-size:1.2rem;font-weight:300;color:rgba(245,242,237,0.65);line-height:1.75;}
 
+    /* HOW IT WORKS */
+    #how-it-works{background:var(--white);padding:6rem 2rem;}
+    .hiw-header{text-align:center;margin-bottom:3rem;}
+    .hiw-intro{font-size:1.25rem;font-weight:300;color:var(--body);max-width:52ch;margin:0 auto;line-height:1.7;}
+    .hiw-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;max-width:1080px;margin:0 auto;}
+    .hiw-item{padding:2rem 1.5rem;border:1px solid var(--stone2);transition:transform 0.2s,box-shadow 0.2s;}
+    .hiw-item:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(10,22,40,0.06);}
+    .hiw-step{font-family:var(--ff-display);font-size:2.2rem;font-weight:600;color:var(--copper);line-height:1;margin-bottom:0.75rem;}
+    .hiw-title{font-family:var(--ff-display);font-size:1.4rem;font-weight:500;color:var(--navy);margin-bottom:0.6rem;line-height:1.3;}
+    .hiw-body{font-size:1.05rem;font-weight:300;color:var(--body);line-height:1.7;}
+
     /* OFFERS */
     #offers{background:var(--white);padding:6rem 2rem;}
     .offers-header{text-align:center;margin-bottom:3rem;}
@@ -130,15 +141,12 @@
     .offer-price span{font-size:1rem;font-weight:300;color:var(--mid);font-family:var(--ff-body);}
     .offer-card.featured .offer-price{color:var(--white);}
     .offer-card.featured .offer-price span{color:rgba(245,242,237,0.6);}
-    .offer-list{list-style:none;padding:0;margin:0 0 1.5rem 0;flex:1;}
+    .offer-stack{margin-bottom:1.25rem;}
+    .stack-label{font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper);margin-bottom:0.5rem;}
+    .offer-list{list-style:none;padding:0;margin:0 0 1.25rem 0;flex:1;}
     .offer-list li{font-size:1.05rem;font-weight:300;color:var(--body);line-height:1.6;padding:0.4rem 0;padding-left:1.5rem;position:relative;}
     .offer-list li::before{content:'—';position:absolute;left:0;color:var(--copper);font-weight:400;}
     .offer-card.featured .offer-list li{color:rgba(245,242,237,0.8);}
-    .offer-note{font-size:1rem;font-weight:300;color:var(--mid);line-height:1.5;margin-bottom:1.5rem;font-style:italic;}
-    .offer-card.featured .offer-note{color:rgba(245,242,237,0.55);}
-    .offer-cta{display:inline-block;text-align:center;width:100%;background:transparent;border:1px solid var(--copper);color:var(--copper);font-family:var(--ff-body);font-size:0.82rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;padding:0.85rem 1.5rem;cursor:pointer;transition:all 0.2s;}
-    .offer-stack{margin-bottom:1.25rem;}
-    .stack-label{font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper);margin-bottom:0.5rem;}
     .offer-bonus{margin-bottom:1.25rem;padding:1rem 1.25rem;background:rgba(184,115,51,0.06);border-left:2px solid var(--copper);}
     .offer-card.featured .offer-bonus{background:rgba(184,115,51,0.1);border-left-color:var(--copper2);}
     .bonus-label{font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper);margin-bottom:0.5rem;}
@@ -146,15 +154,27 @@
     .bonus-list li{font-size:0.95rem;font-weight:300;color:var(--body);line-height:1.5;padding:0.25rem 0;padding-left:1.25rem;position:relative;}
     .bonus-list li::before{content:'+';position:absolute;left:0;color:var(--copper);font-weight:600;}
     .offer-card.featured .bonus-list li{color:rgba(245,242,237,0.8);}
+    .offer-risk{font-size:0.95rem;font-weight:300;color:var(--mid);margin-bottom:1rem;padding:0.75rem 1rem;background:rgba(184,115,51,0.06);border-left:2px solid var(--copper);}
+    .offer-card.featured .offer-risk{color:rgba(245,242,237,0.6);background:rgba(184,115,51,0.1);border-left-color:var(--copper2);}
     .offer-scarcity{font-size:0.95rem;font-weight:500;color:var(--navy);margin-bottom:1rem;padding:0.6rem 1rem;background:rgba(184,115,51,0.08);border:1px solid rgba(184,115,51,0.2);}
     .offer-card.featured .offer-scarcity{color:var(--white);background:rgba(184,115,51,0.15);border-color:rgba(184,115,51,0.3);}
     .offer-anchor{font-size:0.9rem;font-weight:300;color:var(--mid);font-style:italic;margin-bottom:1rem;line-height:1.5;}
     .offer-card.featured .offer-anchor{color:rgba(245,242,237,0.5);}
+    .offer-note{font-size:1rem;font-weight:300;color:var(--mid);line-height:1.5;margin-bottom:1.5rem;font-style:italic;}
+    .offer-card.featured .offer-note{color:rgba(245,242,237,0.55);}
+    .offer-cta{display:inline-block;text-align:center;width:100%;background:transparent;border:1px solid var(--copper);color:var(--copper);font-family:var(--ff-body);font-size:0.82rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;padding:0.85rem 1.5rem;cursor:pointer;transition:all 0.2s;}
     .offer-cta:hover{background:var(--copper);color:var(--white);}
     .offer-card.featured .offer-cta{background:var(--copper);color:var(--white);border-color:var(--copper);}
     .offer-card.featured .offer-cta:hover{background:var(--copper2);}
-    .offer-risk{font-size:0.95rem;font-weight:300;color:var(--mid);margin-bottom:1.5rem;padding:0.75rem 1rem;background:rgba(184,115,51,0.06);border-left:2px solid var(--copper);}
-    .offer-card.featured .offer-risk{color:rgba(245,242,237,0.6);background:rgba(184,115,51,0.1);border-left-color:var(--copper2);}
+
+    /* RESULTS */
+    #results{background:var(--stone);padding:6rem 2rem;}
+    .results-header{text-align:center;margin-bottom:3rem;}
+    .results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;max-width:1080px;margin:0 auto;}
+    .result-item{padding:2rem 1.75rem;background:var(--white);border:1px solid var(--stone2);transition:transform 0.2s;}
+    .result-item:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(10,22,40,0.06);}
+    .result-label{font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper);margin-bottom:1rem;}
+    .result-body{font-size:1.05rem;font-weight:300;color:var(--body);line-height:1.7;}
 
     /* MID CTA */
     #mid-cta{background:var(--copper);padding:3rem 2rem;text-align:center;}
@@ -204,6 +224,14 @@
     .about-num-val span{color:var(--copper);}
     .about-num-label{font-size:1rem;font-weight:300;color:var(--mid);}
 
+    /* FAQ */
+    #faq{background:var(--white);padding:6rem 2rem;}
+    .faq-header{text-align:center;margin-bottom:3rem;}
+    .faq-grid{display:grid;grid-template-columns:1fr;gap:1.5rem;max-width:800px;margin:0 auto;}
+    .faq-item{padding:1.75rem 2rem;background:var(--stone);border:1px solid var(--stone2);}
+    .faq-q{font-family:var(--ff-display);font-size:1.35rem;font-weight:500;color:var(--navy);margin-bottom:0.75rem;line-height:1.4;}
+    .faq-a{font-size:1.05rem;font-weight:300;color:var(--body);line-height:1.7;}
+
     /* CONTACT */
     #contact{background:var(--navy);padding:6rem 2rem;}
     .contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:5rem;align-items:start;}
@@ -247,7 +275,7 @@
     /* RESPONSIVE */
     @media(max-width:900px){
       .nav-links{display:none;}
-      .problem-grid,.who-grid,.about-grid,.contact-grid{grid-template-columns:1fr;gap:2.5rem;}
+      .problem-grid,.who-grid,.about-grid,.contact-grid,.hiw-grid,.results-grid{grid-template-columns:1fr;gap:2.5rem;}
       .problem-left{position:static;}
       .arch-grid{grid-template-columns:1fr;}
       .stats-inner{grid-template-columns:repeat(2,1fr);}
@@ -277,6 +305,7 @@
     <div class="nav-links">
       <a href="#problem">Problem</a>
       <a href="#architecture">Architecture</a>
+      <a href="#how-it-works">Process</a>
       <a href="#offers">Engagement</a>
       <a href="#who">Who</a>
       <a href="#about">About</a>
@@ -295,7 +324,7 @@
       <span class="hero-rule"></span>
       <span class="s2">Its commercial system <em>is not.</em></span>
     </h1>
-    <p class="hero-sub">The average international MedTech company spends $200,000 and 18–24 months on their first GCC market entry. Most of that is lost to the wrong distributor, a registration held hostage, and years of conference booths that produce lanyards, not revenue. The distinction is not product quality. It is whether the commercial system was built before the wrong decisions were locked in.</p>
+    <p class="hero-sub">The average international MedTech company burns $200,000 and 18 to 24 months on their first GCC market entry. Most of that is lost to the wrong distributor, a registration held hostage, and conference booths that produce lanyards, not revenue. The difference is not your device. It is whether the commercial system was built before the wrong decisions were locked in.</p>
     <div class="hero-actions">
       <a href="#offers" class="btn-primary">See How to Enter</a>
       <span class="hero-note">CE/FDA-cleared devices only. Limited engagements at a time.</span>
@@ -307,20 +336,24 @@
 <div id="stats">
   <div class="stats-inner">
     <div class="stat-item fade-up">
-      <div class="stat-num"><span>+</span>15</div>
+      <div class="stat-num">15</div>
       <div class="stat-label">Years across GCC, MENA and international markets</div>
     </div>
     <div class="stat-item fade-up">
-      <div class="stat-num"><span>+</span>70</div>
-      <div class="stat-label">Distributor relationships across 10+ countries</div>
+      <div class="stat-num">Over 100</div>
+      <div class="stat-label">Distributor relationships across 7 countries</div>
     </div>
     <div class="stat-item fade-up">
-      <div class="stat-num"><span>+</span>100</div>
+      <div class="stat-num">100</div>
       <div class="stat-label">Surgeons and clinical stakeholders engaged</div>
     </div>
     <div class="stat-item fade-up">
-      <div class="stat-num"><span>+</span>40</div>
+      <div class="stat-num">40</div>
       <div class="stat-label">Hospitals and clinics across the region</div>
+    </div>
+    <div class="stat-item fade-up">
+      <div class="stat-num">Over $10,000,000</div>
+      <div class="stat-label">Deals sourced through direct sales and distribution agreements across 4 markets</div>
     </div>
   </div>
 </div>
@@ -336,9 +369,9 @@
       </div>
       <div class="problem-body fade-up">
         <p>Walk into any MedTech conference and ask a commercial director how they plan to enter the GCC. The answer follows a predictable sequence: attend Arab Health, collect contacts, identify a distributor, get the registration, launch.</p>
-        <p>This is not a market entry strategy. It is a sequence of activities that feels like progress while the structural problems compound underneath. A distributor is selected based on enthusiasm — not capability. Exclusivity is granted. The registration goes in the distributor's name. Eighteen months later nothing has been placed. The manufacturer wants to switch. They cannot — the registration is held by the distributor, and walking away means starting the regulatory clock from zero.</p>
+        <p>This is not a market entry strategy. It is a sequence of activities that feels like progress while the structural problems compound underneath. A distributor is selected on enthusiasm, not capability. Exclusivity is granted. The registration goes in the distributor's name. Eighteen months later nothing has been placed. The manufacturer wants to switch. They cannot. The registration is held by the distributor, and walking away means starting the regulatory clock from zero.</p>
         <div class="problem-pull">
-          <p>"This is not an execution failure. It is an architecture failure — determined in the first ninety days."</p>
+          <p>"This is not an execution failure. It is an architecture failure determined in the first ninety days."</p>
         </div>
       </div>
     </div>
@@ -369,16 +402,16 @@
         <div class="c-cell with"><span class="c-mark ok">✓</span><span>Distributor selected against a weighted capability scorecard</span></div>
       </div>
       <div class="contrast-row">
-        <div class="c-cell without"><span class="c-mark x">✗</span><span>Registration held by distributor — manufacturer cannot switch without losing market position</span></div>
-        <div class="c-cell with"><span class="c-mark ok">✓</span><span>Registration owned by manufacturer or independent AR — switchability protected from day one</span></div>
+        <div class="c-cell without"><span class="c-mark x">✗</span><span>Registration held by distributor. Manufacturer cannot switch without losing market position.</span></div>
+        <div class="c-cell with"><span class="c-mark ok">✓</span><span>Registration owned by manufacturer or independent AR. Switchability protected from day one.</span></div>
       </div>
       <div class="contrast-row">
-        <div class="c-cell without"><span class="c-mark x">✗</span><span>GCC-wide exclusivity granted upfront — commercial leverage lost before revenue starts</span></div>
-        <div class="c-cell with"><span class="c-mark ok">✓</span><span>Country-level agreements with performance gates — leverage maintained throughout</span></div>
+        <div class="c-cell without"><span class="c-mark x">✗</span><span>GCC-wide exclusivity granted upfront. Commercial leverage lost before revenue starts.</span></div>
+        <div class="c-cell with"><span class="c-mark ok">✓</span><span>Country-level agreements with performance gates. Leverage maintained throughout.</span></div>
       </div>
       <div class="contrast-row">
         <div class="c-cell without"><span class="c-mark x">✗</span><span>Distributor has no KOL relationships in the relevant specialty</span></div>
-        <div class="c-cell with"><span class="c-mark ok">✓</span><span>KOL engagement sequenced before distributor activation — clinical pull precedes sales push</span></div>
+        <div class="c-cell with"><span class="c-mark ok">✓</span><span>KOL engagement sequenced before distributor activation. Clinical pull precedes sales push.</span></div>
       </div>
       <div class="contrast-row">
         <div class="c-cell without"><span class="c-mark x">✗</span><span>Three years at Arab Health. Board asking why spend has not produced revenue.</span></div>
@@ -394,14 +427,14 @@
     <div class="arch-header fade-up">
       <span class="section-kicker" style="color:var(--copper);">The Discipline</span>
       <h2 class="section-heading-light">GCC Commercial Architecture</h2>
-      <p style="color:rgba(245,242,237,0.65);font-size:1rem;font-weight:300;max-width:50ch;margin:0 auto;">The structural discipline that converts a CE/FDA-cleared device into repeatable GCC revenue — before the wrong decisions are locked in. Not a strategy document. A system that operates.</p>
+      <p style="color:rgba(245,242,237,0.65);font-size:1rem;font-weight:300;max-width:50ch;margin:0 auto;">The structural discipline that converts a CE/FDA-cleared device into repeatable GCC revenue before the wrong decisions are locked in. Not a strategy document. A system that operates.</p>
     </div>
     <p class="arch-sub">Six components. One architecture. Each designed to protect the decisions that follow it.</p>
     <div class="arch-grid">
       <div class="arch-item fade-up">
         <div class="arch-num">01</div>
         <h3 class="arch-title">Registration Ownership</h3>
-        <p class="arch-body">Market-by-market structure ensuring the manufacturer — not the distributor — controls their market assets. SFDA, MOHAP, NHRA sequenced for switchability.</p>
+        <p class="arch-body">Market-by-market structure ensuring the manufacturer, not the distributor, controls their market assets. SFDA, MOHAP, NHRA sequenced for switchability.</p>
       </div>
       <div class="arch-item fade-up">
         <div class="arch-num">02</div>
@@ -411,22 +444,50 @@
       <div class="arch-item fade-up">
         <div class="arch-num">03</div>
         <h3 class="arch-title">KOL & Clinical Pull</h3>
-        <p class="arch-body">KOL identification, relationship sequencing, and pilot design. Building the clinical case before the sales conversation — market pull before the tender is written.</p>
+        <p class="arch-body">KOL identification, relationship sequencing, and pilot design. Building the clinical case before the sales conversation. Market pull before the tender is written.</p>
       </div>
       <div class="arch-item fade-up">
         <div class="arch-num">04</div>
         <h3 class="arch-title">Commercial Narrative & Pricing</h3>
-        <p class="arch-body">Distributor-facing business case and pricing calibrated to GCC procurement realities — not assumptions carried from the home market.</p>
+        <p class="arch-body">Distributor-facing business case and pricing calibrated to GCC procurement realities, not assumptions carried from the home market.</p>
       </div>
       <div class="arch-item fade-up">
         <div class="arch-num">05</div>
         <h3 class="arch-title">Regulatory Sequencing</h3>
-        <p class="arch-body">Entry market prioritisation, AR/LAR appointment, SFDA and MOHAP pathway management. Entering the right market first — not the easiest one.</p>
+        <p class="arch-body">Entry market prioritisation, AR/LAR appointment, SFDA and MOHAP pathway management. Entering the right market first, not the easiest one.</p>
       </div>
       <div class="arch-item fade-up">
         <div class="arch-num">06</div>
         <h3 class="arch-title">Embedded Execution</h3>
-        <p class="arch-body">Kamal operates as your on-the-ground GCC commercial arm — attending the meetings, managing the distributors, advancing the registrations, week to week.</p>
+        <p class="arch-body">Kamal operates as your on-the-ground GCC commercial arm, attending the meetings, managing the distributors, advancing the registrations, week to week.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how-it-works">
+  <div class="container">
+    <div class="hiw-header fade-up">
+      <span class="section-kicker">The Process</span>
+      <h2 class="section-heading">From first conversation to commercial system in three steps</h2>
+      <p class="hiw-intro">A clear path from assessment to activation. No surprises. No open-ended retainers.</p>
+    </div>
+    <div class="hiw-grid">
+      <div class="hiw-item fade-up">
+        <div class="hiw-step">01</div>
+        <h3 class="hiw-title">Assess</h3>
+        <p class="hiw-body">Take the 4-minute GCC Market Readiness Scorecard. We review your commercial position, competitive density, and structural risks. If the fit is mutual, we schedule a 30-minute alignment call.</p>
+      </div>
+      <div class="hiw-item fade-up">
+        <div class="hiw-step">02</div>
+        <h3 class="hiw-title">Architect</h3>
+        <p class="hiw-body">We design your GCC commercial architecture: KOL sequencing, distributor scorecard, regulatory pathway, and pricing calibration. You review and approve before any execution begins.</p>
+      </div>
+      <div class="hiw-item fade-up">
+        <div class="hiw-step">03</div>
+        <h3 class="hiw-title">Activate</h3>
+        <p class="hiw-body">We execute week to week. KOL conversations, distributor negotiations, regulatory submissions, and commercial channel development. You receive monthly progress reports and milestone confirmations.</p>
       </div>
     </div>
   </div>
@@ -443,7 +504,7 @@
     <div class="offers-grid">
       <div class="offer-card fade-up">
         <div class="offer-badge">Entry Point</div>
-        <h3 class="offer-title">Know if GCC is real before your board commits $200K.</h3>
+        <h3 class="offer-title">The GCC Market Validation Sprint</h3>
         <div class="offer-price">$5,000 <span>flat fee</span></div>
         <div class="offer-stack">
           <p class="stack-label">What you get:</p>
@@ -455,34 +516,34 @@
           </ul>
         </div>
         <div class="offer-bonus">
-          <p class="bonus-label">Bonus:</p>
+          <p class="bonus-label">Included at no extra cost:</p>
           <ul class="bonus-list">
-            <li>GCC Distributor Scorecard Template (used to evaluate all 3 candidates)</li>
-            <li>KOL Outreach Scripts (replicate this process yourself)</li>
+            <li>GCC Distributor Scorecard Template</li>
+            <li>KOL Outreach Scripts</li>
           </ul>
         </div>
         <div class="offer-risk">
-          <p><strong>Guarantee:</strong> Full refund if we don't deliver 3 qualified conversations. No questions asked.</p>
+          <p><strong>Guarantee:</strong> Full refund if we do not deliver 3 qualified conversations.</p>
         </div>
-        <div class="offer-scarcity">Only 2 slots per month. Next opening: July 2026.</div>
+        <div class="offer-scarcity">Limited slots available.</div>
         <p class="offer-note">For leadership teams who want proof before committing to a full expansion.</p>
         <a href="/scorecard/" class="offer-cta">Start the $5K Sprint</a>
       </div>
       <div class="offer-card featured fade-up">
         <div class="offer-badge">Most Common</div>
-        <h3 class="offer-title">Commercial system operational in 6 months.</h3>
+        <h3 class="offer-title">The 6-Month Commercialization Sprint</h3>
         <div class="offer-price">$3,500 <span>/ month</span></div>
         <div class="offer-stack">
           <p class="stack-label">What you get:</p>
           <ul class="offer-list">
-            <li>KOL network activated in your target specialty (clinical pull before sales push)</li>
-            <li>Distributor appointed with performance-gated contract (not GCC-wide exclusivity)</li>
+            <li>KOL network activated in your target specialty</li>
+            <li>Distributor appointed with performance-gated contract</li>
             <li>Regulatory pathway initiated and submission filed where required</li>
             <li>Commercial channel live with first commitments secured by month 6</li>
           </ul>
         </div>
         <div class="offer-bonus">
-          <p class="bonus-label">Bonus:</p>
+          <p class="bonus-label">Included at no extra cost:</p>
           <ul class="bonus-list">
             <li>Access to private distributor network (70+ relationships across GCC)</li>
             <li>Competitive intelligence report on your top 3 GCC competitors</li>
@@ -490,28 +551,28 @@
           </ul>
         </div>
         <div class="offer-risk">
-          <p><strong>Guarantee:</strong> Cancel anytime with 30 days' notice. If no signed distributor LOI by month 4, month 5 is free.</p>
+          <p><strong>Guarantee:</strong> Cancel anytime with 30 days' notice. If no distributor LOI by month 4, we extend the engagement at no additional cost until the LOI is signed.</p>
         </div>
-        <div class="offer-scarcity">4 slots per year. 2 remaining for 2026.</div>
-        <div class="offer-anchor">A full-time GCC commercial director costs $180K+/year plus relocation and 6 months to productivity.</div>
+        <div class="offer-scarcity">Limited slots available.</div>
+        <div class="offer-anchor">A full-time GCC commercial director costs $180,000+ per year plus relocation and 6 months to productivity.</div>
         <p class="offer-note">For companies with a board mandate to enter GCC in 2026.</p>
         <a href="#contact" class="offer-cta">Secure a 6-Month Slot</a>
       </div>
       <div class="offer-card fade-up">
         <div class="offer-badge">Strategic</div>
-        <h3 class="offer-title">Your embedded GCC commercial arm for 12 months.</h3>
+        <h3 class="offer-title">The Embedded GCC Partner Program</h3>
         <div class="offer-price">From $2,500 <span>/ month + milestones</span></div>
         <div class="offer-stack">
           <p class="stack-label">What you get:</p>
           <ul class="offer-list">
-            <li>12-month embedded engagement with full commercial architecture + execution</li>
-            <li>Base retainer + performance milestones for distributor contract, regulatory filing, and first order</li>
+            <li>12-month embedded engagement with full commercial architecture and execution</li>
+            <li>Base retainer plus performance milestones for distributor contract, regulatory filing, and first order</li>
             <li>No equity. No revenue-share. No cap table complications.</li>
             <li>You retain all registrations and relationships. 30-day exit clause.</li>
           </ul>
         </div>
         <div class="offer-bonus">
-          <p class="bonus-label">Bonus:</p>
+          <p class="bonus-label">Included at no extra cost:</p>
           <ul class="bonus-list">
             <li>Quarterly board strategy sessions and competitive intelligence briefings</li>
             <li>Priority access to new distributor relationships as the network expands</li>
@@ -521,14 +582,39 @@
         <div class="offer-risk">
           <p><strong>Guarantee:</strong> 30-day exit clause. You keep all assets. No equity dilution. No hidden fees.</p>
         </div>
-        <div class="offer-scarcity">2 partnerships at a time. 1 slot available.</div>
-        <div class="offer-anchor">A Big Four GCC market entry engagement starts at $300K and delivers a PowerPoint. This delivers revenue.</div>
+        <div class="offer-scarcity">Limited partnerships available at a time.</div>
+        <div class="offer-anchor">A Big Four GCC market entry engagement starts at $300,000 and delivers a PowerPoint. This delivers revenue.</div>
         <p class="offer-note">For companies ready to treat GCC as a core market, not a side project.</p>
         <a href="#contact" class="offer-cta">Apply for 12-Month Partnership</a>
       </div>
     </div>
   </div>
 </section>
+
+<!-- RECENT RESULTS -->
+<section id="results">
+  <div class="container">
+    <div class="results-header fade-up">
+      <span class="section-kicker">Recent Engagements</span>
+      <h2 class="section-heading">Outcomes, not activity</h2>
+    </div>
+    <div class="results-grid">
+      <div class="result-item fade-up">
+        <p class="result-label">Class II Orthopedic Device</p>
+        <p class="result-body">Distributor contracted in Saudi Arabia within 4 months. SFDA submission filed by month 5. Registration ownership held by the manufacturer.</p>
+      </div>
+      <div class="result-item fade-up">
+        <p class="result-label">Digital Health Platform</p>
+        <p class="result-body">3 hospital pilot agreements signed in the UAE within 8 weeks of engagement start. No regulatory registration required.</p>
+      </div>
+      <div class="result-item fade-up">
+        <p class="result-label">Diagnostic IVD Manufacturer</p>
+        <p class="result-body">Independent authorized representative appointed. Registration ownership secured. Distributor agreement with performance gates executed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- MID CTA -->
 <section id="mid-cta">
   <div class="mid-cta-inner">
@@ -625,17 +711,49 @@
         <h2 class="section-heading">Not a broker. Your GCC commercial arm.</h2>
         <div class="about-body-text">
           <p>I am a biomedical engineer with an MBET from the University of Waterloo. I spent 10 years inside international MedTech commercial roles across North America and MENA before moving to Dubai to build KL MedTech.</p>
-          <p>I know how international companies think about expansion: fast, outcome-driven, and reluctant to hand market control to a distributor they have never met. That is why I built a model where the manufacturer owns the registration, the KOL relationships, and the commercial narrative — while I execute the architecture on the ground.</p>
-          <p>I grew up in a Syrian family where integrity and discipline were not values — they were standards. That shapes every engagement.</p>
-          <p>Over 15 years I have worked across Syria, Saudi Arabia, Egypt, Turkey, Canada, the United States, and the UAE — inside hospitals and operating rooms, across distributor negotiations, regulatory submissions, and commercial strategy for founders, executives, and boards.</p>
-          <p>I have built significant GCC pipelines for international MedTech companies, navigated multi-stakeholder hospital sales cycles, and structured distributor relationships across ten countries. I know what the architecture failure looks like before it becomes expensive — because I have seen it from both sides.</p>
+          <p>I know how international companies think about expansion: fast, outcome-driven, and reluctant to hand market control to a distributor they have never met. That is why I built a model where the manufacturer owns the registration, the KOL relationships, and the commercial narrative, while I execute the architecture on the ground.</p>
+          <p>Over 15 years I have worked across Syria, Saudi Arabia, Egypt, Turkey, Canada, the United States, and the UAE, inside hospitals and operating rooms, across distributor negotiations, regulatory submissions, and commercial strategy for founders, executives, and boards.</p>
+          <p>I have built significant GCC pipelines for international MedTech companies, navigated multi-stakeholder hospital sales cycles, and structured distributor relationships across 7 countries. I know what the architecture failure looks like before it becomes expensive, because I have seen it from both sides.</p>
           <p>I am not a consultant who delivers a report and moves on. I am embedded in the work, week to week, until the commercial system is operational.</p>
+          <p>I grew up in a Syrian family where integrity and discipline were not values. They were standards. That shapes every engagement.</p>
         </div>
         <div class="about-numbers">
-          <div class="about-num-item"><div class="about-num-val"><span>+</span>40</div><div class="about-num-label">Hospitals &amp; clinics</div></div>
-          <div class="about-num-item"><div class="about-num-val"><span>+</span>70</div><div class="about-num-label">Distributors across 10+ countries</div></div>
-          <div class="about-num-item"><div class="about-num-val"><span>+</span>100</div><div class="about-num-label">Clinical stakeholders</div></div>
+          <div class="about-num-item"><div class="about-num-val">40</div><div class="about-num-label">Hospitals &amp; clinics</div></div>
+          <div class="about-num-item"><div class="about-num-val">Over 100</div><div class="about-num-label">Distributors across 7 countries</div></div>
+          <div class="about-num-item"><div class="about-num-val">100</div><div class="about-num-label">Clinical stakeholders</div></div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="faq-header fade-up">
+      <span class="section-kicker">Questions</span>
+      <h2 class="section-heading">What companies ask before they start</h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item fade-up">
+        <p class="faq-q">How is this different from a regulatory consultant?</p>
+        <p class="faq-a">Regulatory consultants are essential partners. They manage the technical filing, documentation, and authority correspondence. We work alongside them, but we focus on what happens before and after the filing: which market to enter first, which distributor protects your registration ownership, how to sequence KOL engagement so clinical pull precedes sales push, and how to price for GCC procurement realities. The registration is necessary. The commercial architecture makes it profitable.</p>
+      </div>
+      <div class="faq-item fade-up">
+        <p class="faq-q">What if we already have a distributor in one GCC market?</p>
+        <p class="faq-a">We assess the existing relationship, protect your registration position, and architect expansion into new markets without disrupting current channels.</p>
+      </div>
+      <div class="faq-item fade-up">
+        <p class="faq-q">How long before we see revenue?</p>
+        <p class="faq-a">For Class I devices and digital health, first commitments typically occur within 6 to 8 months. For Class II and III devices, regulatory timelines extend this to 12 to 18 months. The 6-Month Sprint ensures your commercial channel is live and ready to convert the moment registration clears.</p>
+      </div>
+      <div class="faq-item fade-up">
+        <p class="faq-q">Do you take equity or revenue-share?</p>
+        <p class="faq-a">No. The Embedded Partner Program uses a base retainer plus performance milestones. You retain 100% of your company and all market assets.</p>
+      </div>
+      <div class="faq-item fade-up">
+        <p class="faq-q">What happens if we need to pause or exit?</p>
+        <p class="faq-a">Every engagement includes a 30-day written exit clause. You keep all registrations, KOL relationships, and distributor contracts. There are no penalties and no continuing obligations.</p>
       </div>
     </div>
   </div>
@@ -649,7 +767,7 @@
         <span class="copper-rule" style="background:rgba(184,115,51,0.4);"></span>
         <span class="section-kicker">Direct Line</span>
         <h2 class="contact-heading">Send a note.</h2>
-        <p class="contact-body">The <a href="/scorecard/" style="color:var(--copper);text-decoration:underline;text-underline-offset:3px;">GCC Market Readiness Scorecard</a> gives a structured 4-minute read on your commercial position — that is the starting point for most engagements. This form is for everything else: a partnership question, a specific situation, an introduction.</p>
+        <p class="contact-body">The <a href="/scorecard/" style="color:var(--copper);text-decoration:underline;text-underline-offset:3px;">GCC Market Readiness Scorecard</a> is the starting point for most engagements. It takes 4 minutes and gives you a structured read on your commercial position. This form is for everything else: a specific situation, a partnership question, or an introduction.</p>
         <p class="contact-note">Reviewed personally. Response within two business days. KL MedTech works with a small number of companies at a time.</p>
       </div>
       <div class="fade-up">
