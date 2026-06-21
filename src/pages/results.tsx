@@ -445,7 +445,7 @@ export default function Results() {
           <div className="flex items-start justify-between text-xs" style={{ color: "black" }}>
             <div>
               <p className="font-bold">KL MedTech</p>
-              <p style={{ color: "#555" }}>GCC Healthcare Market Entry Advisory</p>
+              <p style={{ color: "#555" }}>GCC Commercial Architecture for MedTech</p>
             </div>
             <div className="text-right">
               <p>kl-advisory.ae</p>
