@@ -137,6 +137,19 @@
     .offer-note{font-size:1rem;font-weight:300;color:var(--mid);line-height:1.5;margin-bottom:1.5rem;font-style:italic;}
     .offer-card.featured .offer-note{color:rgba(245,242,237,0.55);}
     .offer-cta{display:inline-block;text-align:center;width:100%;background:transparent;border:1px solid var(--copper);color:var(--copper);font-family:var(--ff-body);font-size:0.82rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;padding:0.85rem 1.5rem;cursor:pointer;transition:all 0.2s;}
+    .offer-stack{margin-bottom:1.25rem;}
+    .stack-label{font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper);margin-bottom:0.5rem;}
+    .offer-bonus{margin-bottom:1.25rem;padding:1rem 1.25rem;background:rgba(184,115,51,0.06);border-left:2px solid var(--copper);}
+    .offer-card.featured .offer-bonus{background:rgba(184,115,51,0.1);border-left-color:var(--copper2);}
+    .bonus-label{font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper);margin-bottom:0.5rem;}
+    .bonus-list{list-style:none;padding:0;margin:0;}
+    .bonus-list li{font-size:0.95rem;font-weight:300;color:var(--body);line-height:1.5;padding:0.25rem 0;padding-left:1.25rem;position:relative;}
+    .bonus-list li::before{content:'+';position:absolute;left:0;color:var(--copper);font-weight:600;}
+    .offer-card.featured .bonus-list li{color:rgba(245,242,237,0.8);}
+    .offer-scarcity{font-size:0.95rem;font-weight:500;color:var(--navy);margin-bottom:1rem;padding:0.6rem 1rem;background:rgba(184,115,51,0.08);border:1px solid rgba(184,115,51,0.2);}
+    .offer-card.featured .offer-scarcity{color:var(--white);background:rgba(184,115,51,0.15);border-color:rgba(184,115,51,0.3);}
+    .offer-anchor{font-size:0.9rem;font-weight:300;color:var(--mid);font-style:italic;margin-bottom:1rem;line-height:1.5;}
+    .offer-card.featured .offer-anchor{color:rgba(245,242,237,0.5);}
     .offer-cta:hover{background:var(--copper);color:var(--white);}
     .offer-card.featured .offer-cta{background:var(--copper);color:var(--white);border-color:var(--copper);}
     .offer-card.featured .offer-cta:hover{background:var(--copper2);}
@@ -432,27 +445,55 @@
         <div class="offer-badge">Entry Point</div>
         <h3 class="offer-title">Know if GCC is real before your board commits $200K.</h3>
         <div class="offer-price">$5,000 <span>flat fee</span></div>
-        <ul class="offer-list">
-          <li>3 qualified surgeon conversations with unfiltered clinical feedback</li>
-          <li>3 pre-vetted distributor candidates matched to your device category</li>
-          <li>1 regulatory pathway brief with realistic timeline and government fees</li>
-          <li>3-page board-ready brief with a go/no-go recommendation</li>
-        </ul>
-        <p class="offer-risk">Risk reversal: Full refund if we don't deliver 3 qualified conversations.</p>
-        <p class="offer-note">2 slots per month. For leadership teams who want proof before committing to a full expansion.</p>
+        <div class="offer-stack">
+          <p class="stack-label">What you get:</p>
+          <ul class="offer-list">
+            <li>3 qualified surgeon conversations with unfiltered clinical feedback</li>
+            <li>3 pre-vetted distributor candidates matched to your device category</li>
+            <li>1 regulatory pathway brief with realistic timeline and government fees</li>
+            <li>3-page board-ready brief with a go/no-go recommendation</li>
+          </ul>
+        </div>
+        <div class="offer-bonus">
+          <p class="bonus-label">Bonus:</p>
+          <ul class="bonus-list">
+            <li>GCC Distributor Scorecard Template (used to evaluate all 3 candidates)</li>
+            <li>KOL Outreach Scripts (replicate this process yourself)</li>
+          </ul>
+        </div>
+        <div class="offer-risk">
+          <p><strong>Guarantee:</strong> Full refund if we don't deliver 3 qualified conversations. No questions asked.</p>
+        </div>
+        <div class="offer-scarcity">Only 2 slots per month. Next opening: August 2026.</div>
+        <p class="offer-note">For leadership teams who want proof before committing to a full expansion.</p>
         <a href="/scorecard/" class="offer-cta">Start the $5K Sprint</a>
       </div>
       <div class="offer-card featured fade-up">
         <div class="offer-badge">Most Common</div>
         <h3 class="offer-title">Commercial system operational in 6 months.</h3>
         <div class="offer-price">$3,500 <span>/ month</span></div>
-        <ul class="offer-list">
-          <li>KOL network activated in your target specialty (clinical pull before sales push)</li>
-          <li>Distributor appointed with performance-gated contract (not GCC-wide exclusivity)</li>
-          <li>Regulatory pathway initiated and submission filed where required</li>
-          <li>Commercial channel live with first commitments secured by month 6</li>
-        </ul>
-        <p class="offer-risk">Total investment: $21,000 over 6 months. Cancel anytime with 30 days' notice.</p>
+        <div class="offer-stack">
+          <p class="stack-label">What you get:</p>
+          <ul class="offer-list">
+            <li>KOL network activated in your target specialty (clinical pull before sales push)</li>
+            <li>Distributor appointed with performance-gated contract (not GCC-wide exclusivity)</li>
+            <li>Regulatory pathway initiated and submission filed where required</li>
+            <li>Commercial channel live with first commitments secured by month 6</li>
+          </ul>
+        </div>
+        <div class="offer-bonus">
+          <p class="bonus-label">Bonus:</p>
+          <ul class="bonus-list">
+            <li>Access to private distributor network (70+ relationships across GCC)</li>
+            <li>Competitive intelligence report on your top 3 GCC competitors</li>
+            <li>Board presentation template for GCC expansion approval</li>
+          </ul>
+        </div>
+        <div class="offer-risk">
+          <p><strong>Guarantee:</strong> Cancel anytime with 30 days' notice. If no signed distributor LOI by month 4, month 5 is free.</p>
+        </div>
+        <div class="offer-scarcity">4 slots per year. 2 remaining for 2026.</div>
+        <div class="offer-anchor">A full-time GCC commercial director costs $180K+/year plus relocation and 6 months to productivity.</div>
         <p class="offer-note">For companies with a board mandate to enter GCC in 2026.</p>
         <a href="#contact" class="offer-cta">Secure a 6-Month Slot</a>
       </div>
@@ -460,20 +501,34 @@
         <div class="offer-badge">Strategic</div>
         <h3 class="offer-title">Your embedded GCC commercial arm for 12 months.</h3>
         <div class="offer-price">From $2,500 <span>/ month + milestones</span></div>
-        <ul class="offer-list">
-          <li>12-month embedded engagement with full commercial architecture + execution</li>
-          <li>Base retainer + performance milestones for distributor contract, regulatory filing, and first order</li>
-          <li>No equity. No revenue-share. No cap table complications.</li>
-          <li>You retain all registrations and relationships. 30-day exit clause.</li>
-        </ul>
-        <p class="offer-risk">Lower monthly retainer with performance alignment. You keep the assets.</p>
+        <div class="offer-stack">
+          <p class="stack-label">What you get:</p>
+          <ul class="offer-list">
+            <li>12-month embedded engagement with full commercial architecture + execution</li>
+            <li>Base retainer + performance milestones for distributor contract, regulatory filing, and first order</li>
+            <li>No equity. No revenue-share. No cap table complications.</li>
+            <li>You retain all registrations and relationships. 30-day exit clause.</li>
+          </ul>
+        </div>
+        <div class="offer-bonus">
+          <p class="bonus-label">Bonus:</p>
+          <ul class="bonus-list">
+            <li>Quarterly board strategy sessions and competitive intelligence briefings</li>
+            <li>Priority access to new distributor relationships as the network expands</li>
+            <li>Introductions to regulatory consultants and local manufacturers for localization</li>
+          </ul>
+        </div>
+        <div class="offer-risk">
+          <p><strong>Guarantee:</strong> 30-day exit clause. You keep all assets. No equity dilution. No hidden fees.</p>
+        </div>
+        <div class="offer-scarcity">2 partnerships at a time. 1 slot available.</div>
+        <div class="offer-anchor">A Big Four GCC market entry engagement starts at $300K and delivers a PowerPoint. This delivers revenue.</div>
         <p class="offer-note">For companies ready to treat GCC as a core market, not a side project.</p>
         <a href="#contact" class="offer-cta">Apply for 12-Month Partnership</a>
       </div>
     </div>
   </div>
 </section>
-
 <!-- MID CTA -->
 <section id="mid-cta">
   <div class="mid-cta-inner">
